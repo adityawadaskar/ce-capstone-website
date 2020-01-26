@@ -1,15 +1,82 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="overlay"></div>
-<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-  <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
-</video>
-<div class="container h-100">
-  <div class="d-flex h-100 text-center align-items-center">
-    <div class="w-100 text-white">
-      <h1 class="display-3">Video Header</h1>
-      <p class="lead mb-0">With HTML5 Video and Bootstrap 4</p>
+<header>
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="../static/img/capstone.mp4" type="video/mp4">
+  </video>
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-4">UCSB Computer Engineering Capstone</h1>
+      </div>
+    </div>
+  </div>
+</header>
+<div style="background-color: white">
+  <br>
+  <div class="container-sm">
+    <div class="d-flex justify-content-center">
+      <div class="p-2">
+        <h4>Computer Engineering Capstone Projects</h4>
+        <h6>Instructor: Dr. Yogananda Isukapalli</h6>
+        ECE 189A/B/C is a year-long capstone project course sequence in which Computer Engineering (CE) senior students at UC Santa Barbara design and implement an embedded computer system. Working in small groups of three to five, the teams draw on the strengths of each member, and projects are intended to be the culmination of the students' undergraduate education, incorporating both significant hardware and software components and, in some cases, mechanical components as well. CE Capstone Projects offer students real-world experience in the lifespan of developing an embedded system: identifying a problem, designing to required specifications, managing budgets and printed circuit board fabrication, and delivering their finished product on time. CE capstone projects fall into several categories: 
+        <ol>
+          <li>Student defined: Students come up with the design idea on their own.</li>
+          <li>Industry sponsored: Industry partner specifies a design challenge.</li>
+          <li>Research group: Research group at UCSB poses a design challenge.</li>
+          <li>Competitions:  Students enter as contestants in an organized competition.</li> 
+          <li>Nonprofit organizations: Projects that can be of use for nonprofit organizations.</li>
+        </ol>
+        <!-- <img src="../static/img/ce-students-2019.jpg" class="img-fluid" style="width: 40rem;"><br> -->
+      </div>
     </div>
   </div>
 </div>
+<div class="bg-dark text-white"> <!--style="background-color: #b3ecff">-->
+  <br>
+  <div class="d-flex flex-row flex-wrap justify-content-center container-sm">
+            <!-- <img src="../static/img/ce-students-2019.jpg" class="img-fluid" style="width: 40rem;"><br> -->
+    <div class="p-2">
+      <h5><a href="projects" target="_blank" style="color: inherit; text-decoration: inherit;">Eternal Flight: Winner of 2019 Qualcomm CE Capstone Award</a></h5>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/wcj48JE5Xk4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="p-2">
+      <h5><a href="projects" target="_blank" style="color: inherit; text-decoration: inherit;">Hyperloop: Winner of 2018 SpaceX Levitation Competition</a></h5>
+      <div class="embed-responsive embed-responsive-16by9" style="padding-bottom: 4%;">
+        <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/AsJA7Mei5-o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>
+<div class="container">
+  <br>
+  <div class="container-sm d-flex flex-wrap justify-content-center">
+    <div class="p-2"><h3>Capstone is made possible through the support from our sponsors</h3></div>
+  </div>
+  <div class="container-sm d-flex flex-wrap justify-content-center">
+    <div class="p-2"><h6>Lead Sponsor of CE Capstone Program</h6></div>
+  </div>
+  <div class="container-sm d-flex flex-wrap justify-content-center">
+    <div class="p-2"><img style="width:40%; height:100%; display: block; margin-left: auto; margin-right: auto;" class="img-fluid" src="../static/img/sponsors/qualcomm-big.png"></div>
+  </div>
+  <br>
+  <section class="customer-logos slider">
+    <div class="slide"><img src="../static/img/sponsors/resize_directory/qualcomm.png"></div>
+    <div class="slide"><img src="../static/img/sponsors/resize_directory/aerovironment.jpg"></div>
+    <div class="slide"><img src="../static/img/sponsors/resize_directory/alcon.jpg"></div>
+    <div class="slide"><img src="../static/img/sponsors/resize_directory/aptitude.jpg"></div>
+    <div class="slide"><img src="../static/img/sponsors/resize_directory/caci.png"></div>
+    <div class="slide"><img src="../static/img/sponsors/resize_directory/laritech.jpg"></div>
+    <div class="slide"><img src="../static/img/sponsors/resize_directory/navsea.jpg"></div>
+    <div class="slide"><img src="../static/img/sponsors/resize_directory/oakley.jpg"></div>
+    <div class="slide"><img src="../static/img/sponsors/resize_directory/sunstone.jpg"></div>
+    <div class="slide"><img src="../static/img/sponsors/resize_directory/vast circuits.jpg"></div>
+  </section>
+  <br>
+</div>
+
 {% endblock %}
