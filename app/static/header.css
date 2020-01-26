@@ -1,7 +1,22 @@
+/* Sticky Footer Classes */
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
 header {
   position: relative;
   background-color: black;
-  height: 50vh;
+  height: 65vh;
   min-height: 25rem;
   width: 100%;
   overflow: hidden;
@@ -40,7 +55,7 @@ header .overlay {
 
 @media (pointer: coarse) and (hover: none) {
   header {
-    background: url('img/ce-students-2019.png') black no-repeat center center scroll;
+    background: url('./img/ce-students-2019.png') black no-repeat center center scroll;
   }
   header video {
     display: none;

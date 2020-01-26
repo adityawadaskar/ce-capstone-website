@@ -1,5 +1,6 @@
+import os
 from app import app
-from flask import render_template, redirect
+from flask import render_template, redirect, send_from_directory
 from app.models import Student, Project, Sponsor
 
 @app.route('/')
@@ -34,3 +35,8 @@ def students():
 @app.route('/capstone-day')
 def capstone_day():
     return redirect("https://www.ce.ucsb.edu/undergrad/curriculum/capstone/events/ece189", code=302)
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static/img'),
+                          'favicon.png',mimetype='image/vnd.microsoft.icon')
