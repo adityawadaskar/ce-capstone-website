@@ -19,11 +19,14 @@
           pathname = "index";
         }
         if (pathname === "index" || pathname === "sponsors") {
+          // Hide Sponsor footer on index and sponsors pages
           var sponsors_footer = document.getElementById('sponsors_picture');
           sponsors_footer.style.display = "none";
         }
+        // Add link highlight to header for current page
         var navItem = document.getElementById(pathname);
         navItem.classList.add('active');
+        // Sponsor slider
         $(document).ready(function(){
           $('.customer-logos').slick({
             slidesToShow: 6,
@@ -50,9 +53,10 @@
     </script>
   </head>
   <body>
+    <!-- Top Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="/">
-        <img src="../static/img/ce-logo.png" width="40" height="30" alt="">
+        <img src="../static/img/favicon.png" width="40" height="30" alt="">
         CE Capstone
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,9 +79,6 @@
           <li class="nav-item" id="sponsors">
             <a class="nav-link" href="sponsors">Sponsors</a>
           </li>
-          <li class="nav-item" id="students">
-            <a class="nav-link" href="students">Students</a>
-          </li>
           <li class="nav-item" id="capstone-day">
             <a class="nav-link" href="capstone-day" target="_blank">Capstone Day</a>
           </li>
@@ -91,7 +92,7 @@
           <div class="row justify-content-md-center text-center">
             <div class="col">
               <h5>
-                <img class="mb-2" src="../static/img/ce-logo.png" alt="" width="28" height="20">
+                <img class="mb-2" src="../static/img/favicon.png" alt="" width="28" height="20">
                 Computer Engineering Capstone
               </h5>
               UCSB CE Capstone projects offer students real-world experience in the lifespan of developing an embedded system: identifying a problem, designing to required specifications, managing budgets and printed circuit board fabrication, and delivering their finished product on time.

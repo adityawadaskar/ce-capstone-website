@@ -60,20 +60,13 @@
     <div class="p-2"><h6>Lead Sponsor of CE Capstone Program</h6></div>
   </div>
   <div class="container-sm d-flex flex-wrap justify-content-center">
-    <div class="p-2"><img style="width:40%; height:100%; display: block; margin-left: auto; margin-right: auto;" class="img-fluid" src="../static/img/sponsors/qualcomm-big.png"></div>
+    <div class="p-2"><a href="https://www.qualcomm.com" target="_blank"><img style="width:40%; height:100%; display: block; margin-left: auto; margin-right: auto;" class="img-fluid" src="../static/img/sponsors/current_sponsors/qualcomm.png"></a></div>
   </div>
   <br>
   <section class="customer-logos slider">
-    <div class="slide"><img src="../static/img/sponsors/resize_directory/qualcomm.png"></div>
-    <div class="slide"><img src="../static/img/sponsors/resize_directory/aerovironment.jpg"></div>
-    <div class="slide"><img src="../static/img/sponsors/resize_directory/alcon.jpg"></div>
-    <div class="slide"><img src="../static/img/sponsors/resize_directory/aptitude.jpg"></div>
-    <div class="slide"><img src="../static/img/sponsors/resize_directory/caci.png"></div>
-    <div class="slide"><img src="../static/img/sponsors/resize_directory/laritech.jpg"></div>
-    <div class="slide"><img src="../static/img/sponsors/resize_directory/navsea.jpg"></div>
-    <div class="slide"><img src="../static/img/sponsors/resize_directory/oakley.jpg"></div>
-    <div class="slide"><img src="../static/img/sponsors/resize_directory/sunstone.jpg"></div>
-    <div class="slide"><img src="../static/img/sponsors/resize_directory/vast circuits.jpg"></div>
+    {% for sponsor in sponsors %}
+    <a href="{{ sponsor.website }}" target="_blank"><div class="slide"><img src="{{ sponsor.imgpath }}"></div></a>
+    {% endfor %}
   </section>
   <br>
 </div>

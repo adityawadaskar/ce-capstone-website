@@ -1,1 +1,0 @@
-mogrify -resize 100x100 -background white -gravity center -extent 100x100 -path ./resize_directory *.jpg

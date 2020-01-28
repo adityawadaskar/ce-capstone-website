@@ -3,20 +3,64 @@ from app import app
 from flask import render_template, redirect, send_from_directory
 from app.models import Student, Project, Sponsor
 
+CURRENT_SPONSORS = "static/img/sponsors/current_sponsors_resized"
+STUDENT_IMAGES = "static/img/students"
+PROJECT_POSTER = "static/img/projects/poster"
+PROJECT_SLIDES = "static/img/projects/slides"
+PROJECT_LOGOS = "static/img/projects/logos"
+CURRENT_PROJECT_YEAR = 2019
+
 @app.route('/')
 @app.route('/index')
 @app.route('/home')
 def index():
-    return render_template('index.html')
+    current_sponsors_img_dir = os.path.join(app.root_path, CURRENT_SPONSORS)
+    image_filenames = os.listdir(current_sponsors_img_dir)
+    sponsors = Sponsor.query.all()
+    images = list()
+    for filename in image_filenames:
+        for sponsor in sponsors:
+            if filename == sponsor.logo and len(sponsor.logo) > 1:
+                images.append({'imgpath': "../%s/%s" % (CURRENT_SPONSORS, filename), 'website': sponsor.website})
+    return render_template('index.html', sponsors=images)
 
 @app.route('/schedule')
 def schedule():
     return render_template('schedule.html')
 
 @app.route('/projects')
+@app.route('/projects/<int:year>')
 def projects():
-    project = Project.query.all()
-    return render_template('projects.html')
+    try:
+        year
+    except:
+        year = CURRENT_PROJECT_YEAR
+    projects = Project.query.filter_by(year=year).all()
+    for prj in projects:
+        prj.logo = os.path.join(PROJECT_LOGOS, prj.logo)
+        # Sort by alphabetical order and make team lead appear first
+        prj.students = sorted(prj.students, key = lambda i: i.name)
+        for team_lead in prj.team_leads:
+            prj.students.remove(team_lead)
+            prj.students.insert(0, team_lead)
+        # Check video
+        if len(prj.video) == 0:
+            prj.video = None 
+        # Join image path
+        for student in prj.students:
+            student.image = os.path.join(STUDENT_IMAGES, student.image)
+        # Check if website, presentation, and/or poster are available
+        prj.resources_available = True if (prj.website != None or prj.presentation != None or prj.poster != None) else False
+        prj.resources = list()
+        if prj.resources_available:
+            if prj.website != None:
+                prj.resources.append({'link': prj.website, 'info': 'Website'})
+            if prj.presentation != None:
+                prj.resources.append({'link': "../%s/%s" % (PROJECT_SLIDES, prj.presentation), 'info': 'Presentation'})
+            if prj.poster != None:
+                prj.resources.append({'link': "../%s/%s" % (PROJECT_POSTER, prj.poster), 'info': 'Poster'})
+
+    return render_template('projects.html', projects=projects)
 
 @app.route('/resources')
 def resources():
@@ -25,11 +69,6 @@ def resources():
 @app.route('/sponsors')
 def sponsors():
     return render_template('sponsors.html')
-
-@app.route('/students')
-def students():
-    students = Student.query.all()
-    return render_template('students.html')
 
 @app.route('/capstoneday')
 @app.route('/capstone-day')
