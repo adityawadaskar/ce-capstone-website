@@ -2,45 +2,45 @@
 {% block content %}
 <div style="background:  #e6f2ff;">
 <br>
+<h3 class="d-flex flex-row justify-content-center">CE Capstone Projects</h3>
 <div class="d-flex flex-row justify-content-center">
   <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Year
+      {{year-1}}-{{year}}
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       {% for i in range(current_year, 2016, -1)%}
-      <a class="dropdown-item" href="/projects/{{i}}">{{i}}</a>
+      <a class="dropdown-item" href="/projects/{{i}}">{{i-1}}-{{i}}</a>
       {% endfor %}
-      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2016.pdf">2016</a>
-      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2015.pdf">2015</a>
-      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2014.pdf">2014</a>
-      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2013.pdf">2013</a>
-      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2012.pdf">2012</a>
-      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2011.pdf">2011</a>
-      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2010.pdf">2010</a>
-      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2009.pdf">2009</a>
-      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2008.pdf">2008</a>
-      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2007.pdf">2007</a>
-      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2006.pdf">2006</a>
-      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2005.pdf">2005</a>
-      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2004.pdf">2004</a>
-      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2003.pdf">2003</a>
+      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2016.pdf">2015-2016</a>
+      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2015.pdf">2014-2015</a>
+      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2014.pdf">2013-2014</a>
+      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2013.pdf">2012-2013</a>
+      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2012.pdf">2011-2012</a>
+      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2011.pdf">2010-2011</a>
+      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2010.pdf">2009-2010</a>
+      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2009.pdf">2008-2009</a>
+      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2008.pdf">2007-2008</a>
+      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2007.pdf">2006-2007</a>
+      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2006.pdf">2005-2006</a>
+      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2005.pdf">2004-2005</a>
+      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2004.pdf">2003-2004</a>
+      <a class="dropdown-item" target="_blank" href="../static/img/projects/projects_2003.pdf">2002-2003</a>
     </div>
   </div>
 </div>
 <p></p>
-<h3 class="d-flex flex-row justify-content-center">CE Capstone Projects: {{year-1}}-{{year}}</h3>
 <div class="d-flex flex-row flex-wrap justify-content-center">
   {% for project in projects %}
   <a class="btn btn-light" href="#{{ project.name }}" role="button">{{ project.name }}</a>
   {% endfor %}
 </div>
+{% if year_picture %}
 <p></p>
 <div class="d-flex flex-row justify-content-center">
-  {% if year_picture %}
   <img src="{{ year_picture }}" class="img-fluid" style="width: 50rem;">
-  {% endif %}
 </div>
+{% endif %}
 {% for project in projects %}
 <br>
 <div class="d-flex flex-row justify-content-center" id="{{ project.name }}">
@@ -61,11 +61,13 @@
       <h5 class="text-center">Members</h5>
       <div class="d-flex flex-row flex-wrap justify-content-center">
         {% for student in project.students %}
-        <div class="p-2 text-center">
-          <img class="img-fluid rounded-circle" style="max-width: 100px;" src="{{ student.image }}">
-          <br>
-          {{ student.name }}
-        </div>
+        <a href="{{student.linkedin}}" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="{{ student.image }}">
+            <br>
+            <span style="text-decoration: none; color: black;">{{ student.name }}</span>
+          </div>
+        </a>
         {% endfor %}
       </div>
       <p></p>
@@ -82,12 +84,14 @@
       </div>
       {% endif %}
       <p></p>
-      <h5 class="text-center">Sponsors</h5>
-      <div class="card-action text-center">
-        {% for sponsor in project.sponsors %}
-          <a target="_blank" href="{{sponsor.website}}">{{sponsor.name}}</a><br> 
-        {% endfor %} 
-      </div>
+      {% if project.sponsors %}
+        <h5 class="text-center">Sponsors</h5>
+        <div class="card-action text-center">
+          {% for sponsor in project.sponsors %}
+            <a target="_blank" href="{{sponsor.website}}">{{sponsor.name}}</a><br> 
+          {% endfor %} 
+        </div>
+      {% endif %}
     </div>
   </div> 
 </div>

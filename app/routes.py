@@ -9,7 +9,7 @@ PROJECT_POSTER = "static/img/projects/poster"
 PROJECT_SLIDES = "static/img/projects/slides"
 PROJECT_LOGOS = "static/img/projects/logos"
 GROUP_PICTURES = "static/img/group_pictures"
-CURRENT_PROJECT_YEAR = 2019
+CURRENT_PROJECT_YEAR = 2020
 
 @app.route('/')
 @app.route('/index')
@@ -41,9 +41,6 @@ def projects(year=CURRENT_PROJECT_YEAR):
         for team_lead in prj.team_leads:
             prj.students.remove(team_lead)
             prj.students.insert(0, team_lead)
-        # Check video
-        if len(prj.video) == 0:
-            prj.video = None 
         # Join image path
         for student in prj.students:
             student.image = "../%s/%s" % (STUDENT_IMAGES, student.image)
