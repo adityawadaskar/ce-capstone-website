@@ -1,5 +1,5 @@
 import os
-from app import app
+from app import app, pages
 from flask import render_template, redirect, send_from_directory
 from app.models import Student, Project, Sponsor
 
@@ -84,3 +84,9 @@ def capstone_day():
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static/img'),
                           'favicon.png',mimetype='image/vnd.microsoft.icon')
+
+@app.route('/<path:path>/')
+def page(path):
+
+    print(path)
+    return pages.get_or_404(path).html
