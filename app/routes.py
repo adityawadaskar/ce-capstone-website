@@ -8,6 +8,7 @@ STUDENT_IMAGES = "static/img/students"
 PROJECT_POSTER = "static/img/projects/poster"
 PROJECT_SLIDES = "static/img/projects/slides"
 PROJECT_LOGOS = "static/img/projects/logos"
+GROUP_PICTURES = "static/img/group_pictures"
 CURRENT_PROJECT_YEAR = 2019
 
 @app.route('/')
@@ -30,14 +31,11 @@ def schedule():
 
 @app.route('/projects')
 @app.route('/projects/<int:year>')
-def projects():
-    try:
-        year
-    except:
-        year = CURRENT_PROJECT_YEAR
+def projects(year=CURRENT_PROJECT_YEAR):
     projects = Project.query.filter_by(year=year).all()
     for prj in projects:
-        prj.logo = os.path.join(PROJECT_LOGOS, prj.logo)
+        if prj.logo and len(prj.logo) > 1:
+            prj.logo = "../%s/%s" % (PROJECT_LOGOS, prj.logo)
         # Sort by alphabetical order and make team lead appear first
         prj.students = sorted(prj.students, key = lambda i: i.name)
         for team_lead in prj.team_leads:
@@ -48,7 +46,7 @@ def projects():
             prj.video = None 
         # Join image path
         for student in prj.students:
-            student.image = os.path.join(STUDENT_IMAGES, student.image)
+            student.image = "../%s/%s" % (STUDENT_IMAGES, student.image)
         # Check if website, presentation, and/or poster are available
         prj.resources_available = True if (prj.website != None or prj.presentation != None or prj.poster != None) else False
         prj.resources = list()
@@ -59,8 +57,18 @@ def projects():
                 prj.resources.append({'link': "../%s/%s" % (PROJECT_SLIDES, prj.presentation), 'info': 'Presentation'})
             if prj.poster != None:
                 prj.resources.append({'link': "../%s/%s" % (PROJECT_POSTER, prj.poster), 'info': 'Poster'})
+    
+    year_picture = find_year_picture(year)
 
-    return render_template('projects.html', projects=projects)
+    return render_template('projects.html', projects=projects, year=year, current_year=CURRENT_PROJECT_YEAR, year_picture=year_picture)
+
+def find_year_picture(year):
+    path = os.path.join(app.root_path, GROUP_PICTURES)
+    files = os.listdir(path)
+    for fname in files:
+        if str(year) in fname:
+            return "../%s/%s" % (GROUP_PICTURES, fname)
+    return None
 
 @app.route('/resources')
 def resources():
