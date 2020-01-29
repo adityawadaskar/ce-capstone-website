@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/header.css">
+    <link rel="stylesheet" href="/static/slider.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <title>CE Capstone</title>
+    
+    <script type="text/javascript">
+      window.onload = function () {
+        console.log(window.location.pathname);
+        var pathname = (window.location.pathname).replace('/', '');
+        if (pathname === "" || pathname === "home") {
+          pathname = "index";
+        }
+        if (pathname === "index" || pathname === "sponsors") {
+          // Hide Sponsor footer on index and sponsors pages
+          var sponsors_footer = document.getElementById('sponsors_picture');
+          sponsors_footer.style.display = "none";
+        }
+        // Add link highlight to header for current page
+        var navItem = document.getElementById(pathname);
+        navItem.classList.add('active');
+        // Sponsor slider
+        $(document).ready(function(){
+          $('.customer-logos').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 4
+              }
+            }, {
+              breakpoint: 520,
+              settings: {
+                slidesToShow: 3
+              }
+            }]
+          });
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Top Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">
+        <img src="/static/img/favicon.png" width="40" height="30" alt="">
+        CE Capstone
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" id="index">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item" id="schedule">
+            <a class="nav-link" href="/schedule/">Schedule</a>
+          </li>
+          <li class="nav-item" id="projects">
+            <a class="nav-link" href="/projects/">Projects</a>
+          </li>
+          <li class="nav-item" id="resources">
+            <a class="nav-link" href="/resources/">Resources</a>
+          </li>
+          <li class="nav-item" id="sponsors">
+            <a class="nav-link" href="/sponsors/">Sponsors</a>
+          </li>
+          <li class="nav-item" id="capstone-day">
+            <a class="nav-link" href="https://www.ce.ucsb.edu/undergrad/curriculum/capstone/events/ece189" target="_blank">Capstone Day</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+<div style="background:  #e6ecff;">
+<br>
+<h3 class="d-flex flex-row justify-content-center">CE Capstone Projects</h3>
+<div class="d-flex flex-row justify-content-center">
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      2019-2020
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      
+      <a class="dropdown-item" href="/projects/2020/">2019-2020</a>
+      
+      <a class="dropdown-item" href="/projects/2019/">2018-2019</a>
+      
+      <a class="dropdown-item" href="/projects/2018/">2017-2018</a>
+      
+      <a class="dropdown-item" href="/projects/2017/">2016-2017</a>
+      
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2016.pdf">2015-2016</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2015.pdf">2014-2015</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2014.pdf">2013-2014</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2013.pdf">2012-2013</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2012.pdf">2011-2012</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2011.pdf">2010-2011</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2010.pdf">2009-2010</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2009.pdf">2008-2009</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2008.pdf">2007-2008</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2007.pdf">2006-2007</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2006.pdf">2005-2006</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2005.pdf">2004-2005</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2004.pdf">2003-2004</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2003.pdf">2002-2003</a>
+    </div>
+  </div>
+</div>
+<p></p>
+<div class="d-flex flex-row flex-wrap justify-content-center">
+  
+  <a class="btn btn-light" href="#Bermuda" role="button">Bermuda</a>
+  
+  <a class="btn btn-light" href="#BlueDentist" role="button">BlueDentist</a>
+  
+  <a class="btn btn-light" href="#Scopen" role="button">Scopen</a>
+  
+  <a class="btn btn-light" href="#IntelliSight" role="button">IntelliSight</a>
+  
+  <a class="btn btn-light" href="#Guardian" role="button">Guardian</a>
+  
+  <a class="btn btn-light" href="#RTCM" role="button">RTCM</a>
+  
+  <a class="btn btn-light" href="#SafeVision" role="button">SafeVision</a>
+  
+  <a class="btn btn-light" href="#True Posture" role="button">True Posture</a>
+  
+  <a class="btn btn-light" href="#VisHawk" role="button">VisHawk</a>
+  
+  <a class="btn btn-light" href="#WALL-E 4.0" role="button">WALL-E 4.0</a>
+  
+</div>
+
+
+<br>
+<div class="d-flex flex-row justify-content-center" id="Bermuda">
+  <div class="p-2 container card bg-light" style="width: 45rem;">
+    <div class="card-body">
+      <h3 class="card-title text-center">
+        Bermuda
+        
+      </h3>
+      
+      <h5 class="text-center">Members</h5>
+      <div class="d-flex flex-row flex-wrap justify-content-center">
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Crystal Eskander</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Jerry Liu</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Lekha Adari</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Lillian Liu</span>
+          </div>
+        </a>
+        
+      </div>
+      <p></p>
+      <h5 class="text-center">Description</h5>
+      <p>
+      Bermuda aims to address the problem of localized GPS loss that can be caused by potential jamming during cyberwarfare. Unlike GPS and its use of satellites, Bermuda uses cell towers to trilaterate an entity&#39;s location to provide a location tracking system that is more robust against jamming. The system is implemented by placing a multi-channel software defined radio, an inertial measurement unit, and a microcontroller on a drone. Bermuda receives and processes directional signals from cellular towers to detect the drone&#39;s location relative to the towers. Prior cell-tower geolocation data is then used as ground truth to determine the global location of the drone.
+      </p>
+      
+      <h5 class="text-center">Resources</h5>
+      <div class="card-action text-center" style="word-spacing: 20pt;">
+        
+        <a target="_blank" href="https://sites.google.com/view/bermudacapstone/home">Website</a>
+        
+      </div>
+      
+      <p></p>
+      
+        <h5 class="text-center">Sponsors</h5>
+        <div class="card-action text-center">
+          
+            <a target="_blank" href="https://www.avinc.com/">AeroVironment</a><br> 
+           
+        </div>
+      
+    </div>
+  </div> 
+</div>
+
+<br>
+<div class="d-flex flex-row justify-content-center" id="BlueDentist">
+  <div class="p-2 container card bg-light" style="width: 45rem;">
+    <div class="card-body">
+      <h3 class="card-title text-center">
+        BlueDentist
+        
+      </h3>
+      
+      <h5 class="text-center">Members</h5>
+      <div class="d-flex flex-row flex-wrap justify-content-center">
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Jeff Longo</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Chris Chan</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Griffin Danninger</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Zach Battles</span>
+          </div>
+        </a>
+        
+      </div>
+      <p></p>
+      <h5 class="text-center">Description</h5>
+      <p>
+      With the explosion of connected electronic devices, wireless security efforts are in high demand. BlueDentist targets Bluetooth devices, which are traditionally hard to track due to their unadvertised presence and frequency hopping. BlueDentist utilizes software defined radios to collect data from a large band of frequencies and efficiently processes this data with an NVIDIA Jetson Xavier to provide a user interface which details all local Bluetooth devices and activity. A battery powered design and expandable storage interface allow long durations of monitoring unsupervised.
+      </p>
+      
+      <h5 class="text-center">Resources</h5>
+      <div class="card-action text-center" style="word-spacing: 20pt;">
+        
+        <a target="_blank" href="https://sites.google.com/view/bluedentist/home">Website</a>
+        
+      </div>
+      
+      <p></p>
+      
+        <h5 class="text-center">Sponsors</h5>
+        <div class="card-action text-center">
+          
+            <a target="_blank" href="https://www.caci.com/">CACI International</a><br> 
+           
+        </div>
+      
+    </div>
+  </div> 
+</div>
+
+<br>
+<div class="d-flex flex-row justify-content-center" id="Scopen">
+  <div class="p-2 container card bg-light" style="width: 45rem;">
+    <div class="card-body">
+      <h3 class="card-title text-center">
+        Scopen
+        
+      </h3>
+      
+      <h5 class="text-center">Members</h5>
+      <div class="d-flex flex-row flex-wrap justify-content-center">
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Byron Aguilar</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Boning Dong</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Cesar Gonzalez</span>
+          </div>
+        </a>
+        
+      </div>
+      <p></p>
+      <h5 class="text-center">Description</h5>
+      <p>
+      Scopen is a pen-like wireless oscilloscope that is both convenient and affordable for students in introductory engineering courses as well as engineering hobbyists. Scopen has the functionalities of a benchtop oscilloscope and the flexibility and portability of a handheld multimeter that captures voltage waveforms and transmits them wirelessly to a user&#39;s personal device. Designed for comfortable one-handed use, the device contains a scroll wheel that allows the user to conveniently change measurement settings such as time and voltage division. Scopen aims to accurately capture signals within a 20MHz bandwidth, with maximum voltages of 200V peak-peak, and minimum voltages of 75mV peak-peak, which make it a competitive offering in the market.
+      </p>
+      
+      <h5 class="text-center">Resources</h5>
+      <div class="card-action text-center" style="word-spacing: 20pt;">
+        
+        <a target="_blank" href="https://sites.google.com/view/scopen-oscilliscope/home">Website</a>
+        
+      </div>
+      
+      <p></p>
+      
+    </div>
+  </div> 
+</div>
+
+<br>
+<div class="d-flex flex-row justify-content-center" id="IntelliSight">
+  <div class="p-2 container card bg-light" style="width: 45rem;">
+    <div class="card-body">
+      <h3 class="card-title text-center">
+        IntelliSight
+        
+      </h3>
+      
+      <h5 class="text-center">Members</h5>
+      <div class="d-flex flex-row flex-wrap justify-content-center">
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Xinyuan Zhang</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Vanessa Mejia</span>
+          </div>
+        </a>
+        
+      </div>
+      <p></p>
+      <h5 class="text-center">Description</h5>
+      <p>
+      Although smartphones and GPS have made navigation dramatically easier, it can still be extremely difficult for a visually impared individual to identify their location. Phone applications can show the surrounding area on a 2D plane, but require the user to interact heavily with the application to determine their physical context and surroundings. IntelliSight targets this problem by designing a pair of sunglasses, equipped with an inertial measurement unit (IMU), which quickly relay location information with a simple motion of the head. This device will directly capture the user&#39;s position and orientation, determine any landmarks or buildings present near the user, and relay the information to the user over audio. The IMU, battery, and Bluetooth module are all combined on a small footprint to fit on the sunglasses, with easy access to a charging port to improve usability.
+      </p>
+      
+      <h5 class="text-center">Resources</h5>
+      <div class="card-action text-center" style="word-spacing: 20pt;">
+        
+        <a target="_blank" href="https://sites.google.com/view/intellisight/home">Website</a>
+        
+      </div>
+      
+      <p></p>
+      
+    </div>
+  </div> 
+</div>
+
+<br>
+<div class="d-flex flex-row justify-content-center" id="Guardian">
+  <div class="p-2 container card bg-light" style="width: 45rem;">
+    <div class="card-body">
+      <h3 class="card-title text-center">
+        Guardian
+        
+      </h3>
+      
+      <h5 class="text-center">Members</h5>
+      <div class="d-flex flex-row flex-wrap justify-content-center">
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Weiyun Jiang</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Alexis Yang</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Jiajun Wan</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Ning Du</span>
+          </div>
+        </a>
+        
+      </div>
+      <p></p>
+      <h5 class="text-center">Description</h5>
+      <p>
+      Elephant-Human Conflict (EHC) is one of the major problems in most African and Asian countries. As humans continue to utilize natural resources for their own development, the living area of elephants continues to decrease. This leads elephants to invade human living areas and crop-raid more frequently, costing millions of dollars annually. Guardian proposes an autonomous drone system to mitigate crop-raiding. The system is comprised of three parts: a compact low-power GPS tag that is installed on the elephants, a receiver stationed in the human living area that detects the elephantsâ€™ presence, and an autonomous drone that tracks and herds the elephants away from the area.
+      </p>
+      
+      <h5 class="text-center">Resources</h5>
+      <div class="card-action text-center" style="word-spacing: 20pt;">
+        
+        <a target="_blank" href="https://jiangweiyun1013.wixsite.com/guardian">Website</a>
+        
+      </div>
+      
+      <p></p>
+      
+    </div>
+  </div> 
+</div>
+
+<br>
+<div class="d-flex flex-row justify-content-center" id="RTCM">
+  <div class="p-2 container card bg-light" style="width: 45rem;">
+    <div class="card-body">
+      <h3 class="card-title text-center">
+        RTCM
+        
+      </h3>
+      
+      <h5 class="text-center">Members</h5>
+      <div class="d-flex flex-row flex-wrap justify-content-center">
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Trenton Rochelle</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Justin Hemphill</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Ziming Qi</span>
+          </div>
+        </a>
+        
+      </div>
+      <p></p>
+      <h5 class="text-center">Description</h5>
+      <p>
+      An impaired state of coagulation called coagulopathy is a deadly condition that occurs in approximately a quarter of trauma patients. This condition is not easily detectable, leading to delayed care in a time-critical situation. RTCM is a real-time coagulopathy measuring system that encases an Android device, allowing for quick and clear patient readings. A drop of blood is set into a sensor strip where it is then placed onto a thermoelectric Peltier module and connects to the sensor reader. The sensor reader is attached to a potentiostat which interfaces with a microcontroller that relays the information to the Android device. Personalized patient care is then displayed on a custom-built app. RTCM also has the capability to be charged and used at the same time ensuring ease of use for the first-responders.
+      </p>
+      
+      <h5 class="text-center">Resources</h5>
+      <div class="card-action text-center" style="word-spacing: 20pt;">
+        
+        <a target="_blank" href="https://sites.google.com/view/rtcm">Website</a>
+        
+      </div>
+      
+      <p></p>
+      
+        <h5 class="text-center">Sponsors</h5>
+        <div class="card-action text-center">
+          
+            <a target="_blank" href="http://www.aptitudemedical.com/">Aptitude</a><br> 
+           
+        </div>
+      
+    </div>
+  </div> 
+</div>
+
+<br>
+<div class="d-flex flex-row justify-content-center" id="SafeVision">
+  <div class="p-2 container card bg-light" style="width: 45rem;">
+    <div class="card-body">
+      <h3 class="card-title text-center">
+        SafeVision
+        
+      </h3>
+      
+      <h5 class="text-center">Members</h5>
+      <div class="d-flex flex-row flex-wrap justify-content-center">
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Rick Franc</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Nathan Bornfreund</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Steven Landis</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Willy Tu</span>
+          </div>
+        </a>
+        
+      </div>
+      <p></p>
+      <h5 class="text-center">Description</h5>
+      <p>
+      SafeVision detects objects that will obstruct movement of a surgical robotic arm and microscope head. SafeVision uses the spatial information of the microscope head and robotic arm to prevent collisions with obstacles during movement. Once an object interferes with the robotic arm&#39;s trajectory, SafeVision stops arm movement and warns the operator of the detected obstruction. The robotic arm uses distance measuring sensors which forward the information to a processor. The processor communicates with the main Windows system to control the robotic arm using Universal Robotics&#39; API.
+
+      </p>
+      
+      <h5 class="text-center">Resources</h5>
+      <div class="card-action text-center" style="word-spacing: 20pt;">
+        
+        <a target="_blank" href="https://sites.google.com/view/safevision/home">Website</a>
+        
+      </div>
+      
+      <p></p>
+      
+        <h5 class="text-center">Sponsors</h5>
+        <div class="card-action text-center">
+          
+            <a target="_blank" href="https://www.alcon.com/">Alcon</a><br> 
+           
+        </div>
+      
+    </div>
+  </div> 
+</div>
+
+<br>
+<div class="d-flex flex-row justify-content-center" id="True Posture">
+  <div class="p-2 container card bg-light" style="width: 45rem;">
+    <div class="card-body">
+      <h3 class="card-title text-center">
+        True Posture
+        
+      </h3>
+      
+      <h5 class="text-center">Members</h5>
+      <div class="d-flex flex-row flex-wrap justify-content-center">
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Jiyu Zhou</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Dom Jiang</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Prabal Saha</span>
+          </div>
+        </a>
+        
+      </div>
+      <p></p>
+      <h5 class="text-center">Description</h5>
+      <p>
+      Ophthalmologists are prone to musculoskeletal disorders due to their hunched posture when operating a surgical microscope. True Posture aims to provide insights on posture when using a 3D microscope visualization system in contrast to a traditional surgical microscope. True Posture implements a system that measures the electrical activity produced by skeletal back muscle while performing surgery using electromyography (EMG) sensors. The data collected from these sensors is used to provide insights on the surgeon&#39;s musculoskeletal state.
+      </p>
+      
+      <h5 class="text-center">Resources</h5>
+      <div class="card-action text-center" style="word-spacing: 20pt;">
+        
+        <a target="_blank" href="https://coolstar.moe/trueposture/">Website</a>
+        
+      </div>
+      
+      <p></p>
+      
+        <h5 class="text-center">Sponsors</h5>
+        <div class="card-action text-center">
+          
+            <a target="_blank" href="https://www.alcon.com/">Alcon</a><br> 
+           
+        </div>
+      
+    </div>
+  </div> 
+</div>
+
+<br>
+<div class="d-flex flex-row justify-content-center" id="VisHawk">
+  <div class="p-2 container card bg-light" style="width: 45rem;">
+    <div class="card-body">
+      <h3 class="card-title text-center">
+        VisHawk
+        
+      </h3>
+      
+      <h5 class="text-center">Members</h5>
+      <div class="d-flex flex-row flex-wrap justify-content-center">
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Matthew Dupree</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Xihan Liu</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Yingchao Zhu</span>
+          </div>
+        </a>
+        
+      </div>
+      <p></p>
+      <h5 class="text-center">Description</h5>
+      <p>
+      The VisHawk project is pursuing RF-silent autonomous flight of multirotor UAVs between ships underway at sea. We implement this behaviour by guiding the final approach with Apriltag visual fiducials. Using GPS and a known initial trajectory of the landing vessel, VisHawk closes to within visual range of the vessel. VisHawk then uses the visual marker to produce a safe approach trajectory, updating in real time to consider uncertainties such as sea conditions moving the deck of the landing vessel.
+      </p>
+      
+      <h5 class="text-center">Resources</h5>
+      <div class="card-action text-center" style="word-spacing: 20pt;">
+        
+        <a target="_blank" href="https://sites.engineering.ucsb.edu/~mdupree/classes/ECE189A/">Website</a>
+        
+      </div>
+      
+      <p></p>
+      
+        <h5 class="text-center">Sponsors</h5>
+        <div class="card-action text-center">
+          
+            <a target="_blank" href="https://www.navsea.navy.mil/">NAVSEA</a><br> 
+           
+        </div>
+      
+    </div>
+  </div> 
+</div>
+
+<br>
+<div class="d-flex flex-row justify-content-center" id="WALL-E 4.0">
+  <div class="p-2 container card bg-light" style="width: 45rem;">
+    <div class="card-body">
+      <h3 class="card-title text-center">
+        WALL-E 4.0
+        
+      </h3>
+      
+      <h5 class="text-center">Members</h5>
+      <div class="d-flex flex-row flex-wrap justify-content-center">
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Yini Wang</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Ran Mo</span>
+          </div>
+        </a>
+        
+      </div>
+      <p></p>
+      <h5 class="text-center">Description</h5>
+      <p>
+      One of the most important questions in Marine Biology is how new species arise and shape the biodiversity of the ocean. WALL-E was developed to answer this question by studying cypridinid ostracods, a &#39;sea firefly&#39; with incredible biodiversity: many different subspecies output various light patterns which WALL-E catalogs. WALL-E is equipped with two cameras to record 3D videos of the bioluminescence, as well as a Photomultiplier Tube to record light levels with extreme precision. Both these features, combined with intelligent processing to recognize bioluminescence, rectify the video, and convert them from grayscale to RGB, will allow WALL-E&#39;s neural networks to identify the subspecies of ostracods, and even recognize new species.
+      </p>
+      
+      <h5 class="text-center">Resources</h5>
+      <div class="card-action text-center" style="word-spacing: 20pt;">
+        
+        <a target="_blank" href="https://sites.google.com/view/walle2019/home">Website</a>
+        
+      </div>
+      
+      <p></p>
+      
+        <h5 class="text-center">Sponsors</h5>
+        <div class="card-action text-center">
+          
+            <a target="_blank" href="https://labs.eemb.ucsb.edu/oakley/todd/">Oakley Lab</a><br> 
+           
+        </div>
+      
+    </div>
+  </div> 
+</div>
+
+</span>
+
+    <div class="bg-dark text-white">
+      <div class="container text-center">
+        <footer id="sticky-footer" class="pt-4 my-md-5 pt-md-5 border-top" style="flex-shrink: none;">
+          <div class="row justify-content-md-center text-center">
+            <div class="col">
+              <h5>
+                <img class="mb-2" src="/static/img/favicon.png" alt="" width="28" height="20">
+                Computer Engineering Capstone
+              </h5>
+              UCSB CE Capstone projects offer students real-world experience in the lifespan of developing an embedded system: identifying a problem, designing to required specifications, managing budgets and printed circuit board fabrication, and delivering their finished product on time.
+              <br><br>
+            </div>
+            <div class="col-md-auto" id="sponsors_picture">
+              <h5>Sponsors</h5>
+              <a href="sponsors"><img src="/static/img/sponsors/all_sponsors.png" alt="" width="250" height="140"></a>
+              <br><br>
+            </div>
+            <div class="col-md-auto">
+              <h5>Contact</h5>
+              <ul class="list-unstyled text-small">
+                <li>Instructor: <a href="https://www.ece.ucsb.edu/~yoga/" target="_blank">Yogananda Isukapalli</a></li>
+                <li>Email: <a href="yoga@ucsb.edu">yoga@ucsb.edu</a></li>
+                <li>Capstone Lab: <a href="https://goo.gl/maps/js6vv6Y7fEnv88rS8" target="_blank">Harold Frank Hall, Room 4118</a></li>
+              </ul>
+              <small class="d-block mb-3 text-muted">&copy; 2019-2020. This website was built using Flask, BootStrap, and GitHub.</small>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <br>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

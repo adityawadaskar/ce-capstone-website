@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/header.css">
+    <link rel="stylesheet" href="/static/slider.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <title>CE Capstone</title>
+    
+    <script type="text/javascript">
+      window.onload = function () {
+        console.log(window.location.pathname);
+        var pathname = (window.location.pathname).replace('/', '');
+        if (pathname === "" || pathname === "home") {
+          pathname = "index";
+        }
+        if (pathname === "index" || pathname === "sponsors") {
+          // Hide Sponsor footer on index and sponsors pages
+          var sponsors_footer = document.getElementById('sponsors_picture');
+          sponsors_footer.style.display = "none";
+        }
+        // Add link highlight to header for current page
+        var navItem = document.getElementById(pathname);
+        navItem.classList.add('active');
+        // Sponsor slider
+        $(document).ready(function(){
+          $('.customer-logos').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 4
+              }
+            }, {
+              breakpoint: 520,
+              settings: {
+                slidesToShow: 3
+              }
+            }]
+          });
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Top Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">
+        <img src="/static/img/favicon.png" width="40" height="30" alt="">
+        CE Capstone
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" id="index">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item" id="schedule">
+            <a class="nav-link" href="/schedule/">Schedule</a>
+          </li>
+          <li class="nav-item" id="projects">
+            <a class="nav-link" href="/projects/">Projects</a>
+          </li>
+          <li class="nav-item" id="resources">
+            <a class="nav-link" href="/resources/">Resources</a>
+          </li>
+          <li class="nav-item" id="sponsors">
+            <a class="nav-link" href="/sponsors/">Sponsors</a>
+          </li>
+          <li class="nav-item" id="capstone-day">
+            <a class="nav-link" href="https://www.ce.ucsb.edu/undergrad/curriculum/capstone/events/ece189" target="_blank">Capstone Day</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+<div style="background:  #e6ecff;">
+<br>
+<h3 class="d-flex flex-row justify-content-center">CE Capstone Projects</h3>
+<div class="d-flex flex-row justify-content-center">
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      2018-2019
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      
+      <a class="dropdown-item" href="/projects/2020/">2019-2020</a>
+      
+      <a class="dropdown-item" href="/projects/2019/">2018-2019</a>
+      
+      <a class="dropdown-item" href="/projects/2018/">2017-2018</a>
+      
+      <a class="dropdown-item" href="/projects/2017/">2016-2017</a>
+      
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2016.pdf">2015-2016</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2015.pdf">2014-2015</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2014.pdf">2013-2014</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2013.pdf">2012-2013</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2012.pdf">2011-2012</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2011.pdf">2010-2011</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2010.pdf">2009-2010</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2009.pdf">2008-2009</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2008.pdf">2007-2008</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2007.pdf">2006-2007</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2006.pdf">2005-2006</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2005.pdf">2004-2005</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2004.pdf">2003-2004</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2003.pdf">2002-2003</a>
+    </div>
+  </div>
+</div>
+<p></p>
+<div class="d-flex flex-row flex-wrap justify-content-center">
+  
+  <a class="btn btn-light" href="#Eternal Flight" role="button">Eternal Flight</a>
+  
+  <a class="btn btn-light" href="#BLIPS" role="button">BLIPS</a>
+  
+  <a class="btn btn-light" href="#Cloud Control" role="button">Cloud Control</a>
+  
+  <a class="btn btn-light" href="#Drone Scout" role="button">Drone Scout</a>
+  
+  <a class="btn btn-light" href="#Hands-On Flight" role="button">Hands-On Flight</a>
+  
+  <a class="btn btn-light" href="#IEA" role="button">IEA</a>
+  
+  <a class="btn btn-light" href="#Watchdog" role="button">Watchdog</a>
+  
+</div>
+
+<p></p>
+<div class="d-flex flex-row justify-content-center">
+  <img src="/static/img/group_pictures/2019.png" class="img-fluid" style="width: 50rem;">
+</div>
+
+
+<br>
+<div class="d-flex flex-row justify-content-center" id="Eternal Flight">
+  <div class="p-2 container card bg-light" style="width: 45rem;">
+    <div class="card-body">
+      <h3 class="card-title text-center">
+        Eternal Flight
+        
+        <img src="/static/img/projects/logos/eternal_flight.png" class="img-thumbnail" style="max-width: 100px">
+        
+      </h3>
+      
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wcj48JE5Xk4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <br>
+      
+      <h5 class="text-center">Members</h5>
+      <div class="d-flex flex-row flex-wrap justify-content-center">
+        
+        <a href="https://www.linkedin.com/in/adityawadaskar" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/AdityaWadaskar.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Aditya Wadaskar</span>
+          </div>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/kyleadouglas" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/KyleDouglas.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Kyle Douglas</span>
+          </div>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/richard-boone-7420b3107" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/RichardBoone.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Richard Boone</span>
+          </div>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/sangminoh715" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/SangminOh.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Sang Min Oh</span>
+          </div>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/sayalikakade/" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/SayaliKakade.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Sayali Kakade</span>
+          </div>
+        </a>
+        
+      </div>
+      <p></p>
+      <h5 class="text-center">Description</h5>
+      <p>
+      Eternal Flight&#39;s goal is to address the problem of the short battery life in Unmanned Aerial Vehicles (UAVs) by allowing the ability to operate continuously without the need to land. This is achieved using a novel system called IFS (In-Flight Switching), in which a larger &#34;parent&#34; drone switches the drained battery of the smaller &#34;child&#34; drone, effectively increasing the child drone&#39;s time in flight. The child locates the position of the parent drone using geolocation and positions itself above the parent drone. The child drone then lowers itself slowly and lands on top of the parent drone using computer vision and AprilTags, latching onto the parent drone using electromagnets to prevent further movement. The custom battery switching mechanism slides a new battery into the battery holder on the child drone, and simultaneously pushes out the drained battery. After the battery switching is complete, the child drone is free to take off with a full battery.
+      </p>
+      
+      <h5 class="text-center">Resources</h5>
+      <div class="card-action text-center" style="word-spacing: 20pt;">
+        
+        <a target="_blank" href="https://sites.google.com/view/eternalflight">Website</a>
+        
+        <a target="_blank" href="/static/img/projects/slides/eternal_flight.pdf">Presentation</a>
+        
+        <a target="_blank" href="/static/img/projects/poster/eternal_flight.pdf">Poster</a>
+        
+      </div>
+      
+      <p></p>
+      
+        <h5 class="text-center">Sponsors</h5>
+        <div class="card-action text-center">
+          
+            <a target="_blank" href="http://www.toyon.com/">Toyon Research Corporation</a><br> 
+           
+        </div>
+      
+    </div>
+  </div> 
+</div>
+
+<br>
+<div class="d-flex flex-row justify-content-center" id="BLIPS">
+  <div class="p-2 container card bg-light" style="width: 45rem;">
+    <div class="card-body">
+      <h3 class="card-title text-center">
+        BLIPS
+        
+      </h3>
+      
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-bn8IvINBdI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <br>
+      
+      <h5 class="text-center">Members</h5>
+      <div class="d-flex flex-row flex-wrap justify-content-center">
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/MattSpeck.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Matt Speck</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/AhmedSaied.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Ahmed Saied</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/AmberDu.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Amber Du</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/KevinLa.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Kevin La</span>
+          </div>
+        </a>
+        
+      </div>
+      <p></p>
+      <h5 class="text-center">Description</h5>
+      <p>
+      BLIPS stands for Bluetooth Low energy indoor positioning system. Our goal is to track the movement of doctors, nurses and equipment in an operating room using Bluetooth Low Energy devices that are placed in the employee&#39;s ID cards. 3 - 6 Bluetooth beacons will be placed on the ceilings of the operating room to accurately triangulate the employee&#39;s position using RSSI values. This data is then sent to a server which gives real time location tracking of the wearers in the room. An IMU is used to keep our processor in a low power state until movement is detected in order to conserve battery.
+
+
+      </p>
+      
+      <h5 class="text-center">Resources</h5>
+      <div class="card-action text-center" style="word-spacing: 20pt;">
+        
+        <a target="_blank" href="https://sites.google.com/view/blips-arthrex/home">Website</a>
+        
+        <a target="_blank" href="/static/img/projects/slides/blips.pdf">Presentation</a>
+        
+        <a target="_blank" href="/static/img/projects/poster/blips.pdf">Poster</a>
+        
+      </div>
+      
+      <p></p>
+      
+        <h5 class="text-center">Sponsors</h5>
+        <div class="card-action text-center">
+          
+            <a target="_blank" href="https://www.arthrex.com/">Arthrex</a><br> 
+           
+        </div>
+      
+    </div>
+  </div> 
+</div>
+
+<br>
+<div class="d-flex flex-row justify-content-center" id="Cloud Control">
+  <div class="p-2 container card bg-light" style="width: 45rem;">
+    <div class="card-body">
+      <h3 class="card-title text-center">
+        Cloud Control
+        
+      </h3>
+      
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/IkAbkIUgogE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <br>
+      
+      <h5 class="text-center">Members</h5>
+      <div class="d-flex flex-row flex-wrap justify-content-center">
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/AndrewThompson.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Andrew Thompson</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/AnnaLee.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Anna Lee</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/BrentMorada.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Brent Morada</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ReedTaylor.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Reed Taylor</span>
+          </div>
+        </a>
+        
+      </div>
+      <p></p>
+      <h5 class="text-center">Description</h5>
+      <p>
+      Communicating with groups of people during an emergency situation is an extremely important and challenging task. The Cloud Control project aims to create a crowd control solution using a hexacopter drone. The project consists of a ground control application (GCS) which records the user and transmits their voice data to the drone. The drone is equipped with our custom chip and a speaker system which will amplify the voice messages to a target on the ground. The target application is to be able to fly the drone over a single person or a group of people and relay a message to them from the GCS through a microphone. The GCS sends the captured voice data to the chip on the drone over a wireless connection, and the chip processes the data and outputs it through the attached speaker. The potential applications of this project are very broad and include search and rescue operations, active shooter scenarios, and even recreational events like concerts and festivals.
+
+
+      </p>
+      
+      <h5 class="text-center">Resources</h5>
+      <div class="card-action text-center" style="word-spacing: 20pt;">
+        
+        <a target="_blank" href="https://sites.google.com/view/ucsbcloudcontrol/home">Website</a>
+        
+        <a target="_blank" href="/static/img/projects/slides/cloud_control.pdf">Presentation</a>
+        
+        <a target="_blank" href="/static/img/projects/poster/cloud_control.pdf">Poster</a>
+        
+      </div>
+      
+      <p></p>
+      
+        <h5 class="text-center">Sponsors</h5>
+        <div class="card-action text-center">
+          
+            <a target="_blank" href="https://www.avinc.com/">AeroVironment</a><br> 
+           
+        </div>
+      
+    </div>
+  </div> 
+</div>
+
+<br>
+<div class="d-flex flex-row justify-content-center" id="Drone Scout">
+  <div class="p-2 container card bg-light" style="width: 45rem;">
+    <div class="card-body">
+      <h3 class="card-title text-center">
+        Drone Scout
+        
+      </h3>
+      
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VR5dppAZ3hI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <br>
+      
+      <h5 class="text-center">Members</h5>
+      <div class="d-flex flex-row flex-wrap justify-content-center">
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/AustinHwang.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Austin Hwang</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/AnthonyChen.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Anthony Chen</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/MagaKim.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Maga Kim</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/SunginKim.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Sung In Kim</span>
+          </div>
+        </a>
+        
+      </div>
+      <p></p>
+      <h5 class="text-center">Description</h5>
+      <p>
+      The LGS Drone Scout is a millimeter wave radar system capable of detecting a small UAV or drone in a targeted area. Rotating objects such as the propellers on most drones create distinct micro-doppler signatures in the radar&#39;s return signal. By analyzing the change of the frequency components of this signal in relation to time, the existence and certain characteristics of a drone can be deduced. The frequencies and their magnitudes will be displayed in real-time to show the presence of a drone, along with reports of any features specific to the target including: number of rotors, velocity, and size of payload. The analog signals produced by the radar will be sampled by an ADC and processed using a Zynq-7000 SoC.
+      </p>
+      
+      <h5 class="text-center">Resources</h5>
+      <div class="card-action text-center" style="word-spacing: 20pt;">
+        
+        <a target="_blank" href="https://sites.google.com/view/drone-scout/home">Website</a>
+        
+        <a target="_blank" href="/static/img/projects/slides/drone_scout.pdf">Presentation</a>
+        
+        <a target="_blank" href="/static/img/projects/poster/drone_scout.pdf">Poster</a>
+        
+      </div>
+      
+      <p></p>
+      
+        <h5 class="text-center">Sponsors</h5>
+        <div class="card-action text-center">
+          
+            <a target="_blank" href="https://www.caci.com/">LGS Innovations</a><br> 
+           
+        </div>
+      
+    </div>
+  </div> 
+</div>
+
+<br>
+<div class="d-flex flex-row justify-content-center" id="Hands-On Flight">
+  <div class="p-2 container card bg-light" style="width: 45rem;">
+    <div class="card-body">
+      <h3 class="card-title text-center">
+        Hands-On Flight
+        
+      </h3>
+      
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7XMUQ9w4hJM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <br>
+      
+      <h5 class="text-center">Members</h5>
+      <div class="d-flex flex-row flex-wrap justify-content-center">
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/OscarWang.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Oscar Wang</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/AlexBerlanga.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Alex Berlanga</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/JuanReyes.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Juan Reyes</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/MiguelBerlanga.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Miguel Berlanga</span>
+          </div>
+        </a>
+        
+      </div>
+      <p></p>
+      <h5 class="text-center">Description</h5>
+      <p>
+      Hands-On Flight focuses on making human machine interaction natural. Using simple hand/finger gestures, you can control a drone with operation of a glove. The hand/finger movements you perform are sent to and processed by a phone application that will make it possible to control the drone. The movements performed on the glove are sent to the phone application with the use of Bluetooth communication. After being processed by the phone application, the movements are sent to the drone utilizing WiFi communication. The throttle of the drone is controlled by the stretch sensors located on the fingers of the glove. The direction of the drone is controlled by the inertial measurement unit located on the back of the glove. A haptic disk will be used to create vibrations for user feedback. The Hands-On Flight project seeks to lead a path to more intuitive technology.
+      </p>
+      
+      <h5 class="text-center">Resources</h5>
+      <div class="card-action text-center" style="word-spacing: 20pt;">
+        
+        <a target="_blank" href="https://sites.google.com/view/handsonflight/home?authuser=3">Website</a>
+        
+        <a target="_blank" href="/static/img/projects/slides/hands-on_flight.pdf">Presentation</a>
+        
+        <a target="_blank" href="/static/img/projects/poster/hands-on_flight.pdf">Poster</a>
+        
+      </div>
+      
+      <p></p>
+      
+        <h5 class="text-center">Sponsors</h5>
+        <div class="card-action text-center">
+          
+            <a target="_blank" href="None">Arveng Industries</a><br> 
+           
+        </div>
+      
+    </div>
+  </div> 
+</div>
+
+<br>
+<div class="d-flex flex-row justify-content-center" id="IEA">
+  <div class="p-2 container card bg-light" style="width: 45rem;">
+    <div class="card-body">
+      <h3 class="card-title text-center">
+        IEA
+        
+      </h3>
+      
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/XMk__Djtibg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <br>
+      
+      <h5 class="text-center">Members</h5>
+      <div class="d-flex flex-row flex-wrap justify-content-center">
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/RyanKirkpatrick.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Ryan Kirkpatrick</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/DaliXiao.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Dali Xiao</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/DangNguyen.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Dang Nguyen</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/MinYang.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Min Jian Yang</span>
+          </div>
+        </a>
+        
+      </div>
+      <p></p>
+      <h5 class="text-center">Description</h5>
+      <p>
+      In many industrial manufacturing processes, an underlying goal is to manufacture products with high yield while ensuring financially viable time-to-market. This is especially true for the semiconductor manufacturing processes where Product Engineers spend significant portions of their time analyzing production data to address sudden yield issues, and/or discover ways to optimize the production yield. Intelligent Engineering Assistant (IEA) is an AI assistant designed to facilitate a Product Engineer&#39;s workflow. In the scope of this project, IEA Linguistics, we are extending and enhancing IEA&#39;s human-to-machine translation interface by utilizing modern NLP techniques. Specifically, the enhancement focuses on understanding the Product Engineer&#39;s conversational intents. Standard and open-source packages alone are not suitable as they can produce a noisy output for some nontechnical domain. With a more robust NLP interface, IEA can receive language instructions and present data analytic results in an automated and interactive fashion, such as using visual plots based on various data types. This automated presentation feature effectively reduced the amount of time spent on mechanical tasks and leaves the Product Engineer with more bandwidth involving critical-thinking tasks.
+      </p>
+      
+      <h5 class="text-center">Resources</h5>
+      <div class="card-action text-center" style="word-spacing: 20pt;">
+        
+        <a target="_blank" href="https://ieacapstone.wordpress.com/">Website</a>
+        
+        <a target="_blank" href="/static/img/projects/slides/iea.pdf">Presentation</a>
+        
+        <a target="_blank" href="/static/img/projects/poster/iea.pdf">Poster</a>
+        
+      </div>
+      
+      <p></p>
+      
+        <h5 class="text-center">Sponsors</h5>
+        <div class="card-action text-center">
+          
+            <a target="_blank" href="https://iea.ece.ucsb.edu/">IEA Lab</a><br> 
+           
+        </div>
+      
+    </div>
+  </div> 
+</div>
+
+<br>
+<div class="d-flex flex-row justify-content-center" id="Watchdog">
+  <div class="p-2 container card bg-light" style="width: 45rem;">
+    <div class="card-body">
+      <h3 class="card-title text-center">
+        Watchdog
+        
+      </h3>
+      
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/yqj_CQFRYRI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <br>
+      
+      <h5 class="text-center">Members</h5>
+      <div class="d-flex flex-row flex-wrap justify-content-center">
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/RyanLorica.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Ryan Lorica</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/AnzheYe.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Anzhe Ye</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/JiachengLiu.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Jiacheng Liu</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/JingzheChen.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Jingzhe Chen</span>
+          </div>
+        </a>
+        
+        <a href="None" target="_blank" style="text-decoration: none;">
+          <div class="p-2 text-center">
+            <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/LiqiangMei.jpg">
+            <br>
+            <span style="text-decoration: none; color: black;">Liqiang Mei</span>
+          </div>
+        </a>
+        
+      </div>
+      <p></p>
+      <h5 class="text-center">Description</h5>
+      <p>
+      NASA astronauts are routinely faced with long, complex procedures and often have to call ground control for guidance. This presents a major problem for prospective missions: messages from Mars, for instance, have an up to 20-minute flight-time from one planet to the other. In collaboration with NASA&#39;s Ames Research Center, our project, Watchdog, aims to pioneer solutions by using AI to verify astronauts&#39; fidelity to standard operating procedure and offer suggestions during deviation. The project fuses two approaches: neural network-based real-time video semantic analysis and a network of sensors embedded in astronaut equipment. It aims to identify specific subtasks and understand the ordinal relationships between them in a reliable and generalizable way, with the goal of laying the foundation for a more comprehensive autonomous mission guidance system.
+      </p>
+      
+      <h5 class="text-center">Resources</h5>
+      <div class="card-action text-center" style="word-spacing: 20pt;">
+        
+        <a target="_blank" href="https://sites.google.com/view/nasa-watchdog/home?authuser=0">Website</a>
+        
+        <a target="_blank" href="/static/img/projects/slides/watchdog.pdf">Presentation</a>
+        
+        <a target="_blank" href="/static/img/projects/poster/watchdog.pdf">Poster</a>
+        
+      </div>
+      
+      <p></p>
+      
+        <h5 class="text-center">Sponsors</h5>
+        <div class="card-action text-center">
+          
+            <a target="_blank" href="https://www.nasa.gov/">NASA</a><br> 
+           
+        </div>
+      
+    </div>
+  </div> 
+</div>
+
+</span>
+
+    <div class="bg-dark text-white">
+      <div class="container text-center">
+        <footer id="sticky-footer" class="pt-4 my-md-5 pt-md-5 border-top" style="flex-shrink: none;">
+          <div class="row justify-content-md-center text-center">
+            <div class="col">
+              <h5>
+                <img class="mb-2" src="/static/img/favicon.png" alt="" width="28" height="20">
+                Computer Engineering Capstone
+              </h5>
+              UCSB CE Capstone projects offer students real-world experience in the lifespan of developing an embedded system: identifying a problem, designing to required specifications, managing budgets and printed circuit board fabrication, and delivering their finished product on time.
+              <br><br>
+            </div>
+            <div class="col-md-auto" id="sponsors_picture">
+              <h5>Sponsors</h5>
+              <a href="sponsors"><img src="/static/img/sponsors/all_sponsors.png" alt="" width="250" height="140"></a>
+              <br><br>
+            </div>
+            <div class="col-md-auto">
+              <h5>Contact</h5>
+              <ul class="list-unstyled text-small">
+                <li>Instructor: <a href="https://www.ece.ucsb.edu/~yoga/" target="_blank">Yogananda Isukapalli</a></li>
+                <li>Email: <a href="yoga@ucsb.edu">yoga@ucsb.edu</a></li>
+                <li>Capstone Lab: <a href="https://goo.gl/maps/js6vv6Y7fEnv88rS8" target="_blank">Harold Frank Hall, Room 4118</a></li>
+              </ul>
+              <small class="d-block mb-3 text-muted">&copy; 2019-2020. This website was built using Flask, BootStrap, and GitHub.</small>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <br>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

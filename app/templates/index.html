@@ -65,7 +65,7 @@
   <br>
   <section class="customer-logos slider">
     {% for sponsor in sponsors %}
-    <a href="{{ sponsor.website }}" target="_blank"><div class="slide"><img src="{{ sponsor.imgpath }}"></div></a>
+    <a href="{{ sponsor.website }}" target="_blank"><div class="slide"><img src="{{ url_for('static', filename=sponsor.imgpath) }}"></div></a>
     {% endfor %}
   </section>
   <br>

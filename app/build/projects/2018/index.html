@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/header.css">
+    <link rel="stylesheet" href="/static/slider.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <title>CE Capstone</title>
+    
+    <script type="text/javascript">
+      window.onload = function () {
+        console.log(window.location.pathname);
+        var pathname = (window.location.pathname).replace('/', '');
+        if (pathname === "" || pathname === "home") {
+          pathname = "index";
+        }
+        if (pathname === "index" || pathname === "sponsors") {
+          // Hide Sponsor footer on index and sponsors pages
+          var sponsors_footer = document.getElementById('sponsors_picture');
+          sponsors_footer.style.display = "none";
+        }
+        // Add link highlight to header for current page
+        var navItem = document.getElementById(pathname);
+        navItem.classList.add('active');
+        // Sponsor slider
+        $(document).ready(function(){
+          $('.customer-logos').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 4
+              }
+            }, {
+              breakpoint: 520,
+              settings: {
+                slidesToShow: 3
+              }
+            }]
+          });
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Top Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">
+        <img src="/static/img/favicon.png" width="40" height="30" alt="">
+        CE Capstone
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" id="index">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item" id="schedule">
+            <a class="nav-link" href="/schedule/">Schedule</a>
+          </li>
+          <li class="nav-item" id="projects">
+            <a class="nav-link" href="/projects/">Projects</a>
+          </li>
+          <li class="nav-item" id="resources">
+            <a class="nav-link" href="/resources/">Resources</a>
+          </li>
+          <li class="nav-item" id="sponsors">
+            <a class="nav-link" href="/sponsors/">Sponsors</a>
+          </li>
+          <li class="nav-item" id="capstone-day">
+            <a class="nav-link" href="https://www.ce.ucsb.edu/undergrad/curriculum/capstone/events/ece189" target="_blank">Capstone Day</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+<div style="background:  #e6ecff;">
+<br>
+<h3 class="d-flex flex-row justify-content-center">CE Capstone Projects</h3>
+<div class="d-flex flex-row justify-content-center">
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      2017-2018
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      
+      <a class="dropdown-item" href="/projects/2020/">2019-2020</a>
+      
+      <a class="dropdown-item" href="/projects/2019/">2018-2019</a>
+      
+      <a class="dropdown-item" href="/projects/2018/">2017-2018</a>
+      
+      <a class="dropdown-item" href="/projects/2017/">2016-2017</a>
+      
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2016.pdf">2015-2016</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2015.pdf">2014-2015</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2014.pdf">2013-2014</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2013.pdf">2012-2013</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2012.pdf">2011-2012</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2011.pdf">2010-2011</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2010.pdf">2009-2010</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2009.pdf">2008-2009</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2008.pdf">2007-2008</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2007.pdf">2006-2007</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2006.pdf">2005-2006</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2005.pdf">2004-2005</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2004.pdf">2003-2004</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/projects_2003.pdf">2002-2003</a>
+    </div>
+  </div>
+</div>
+<p></p>
+<div class="d-flex flex-row flex-wrap justify-content-center">
+  
+</div>
+
+<p></p>
+<div class="d-flex flex-row justify-content-center">
+  <img src="/static/img/group_pictures/2018.png" class="img-fluid" style="width: 50rem;">
+</div>
+
+
+</span>
+
+    <div class="bg-dark text-white">
+      <div class="container text-center">
+        <footer id="sticky-footer" class="pt-4 my-md-5 pt-md-5 border-top" style="flex-shrink: none;">
+          <div class="row justify-content-md-center text-center">
+            <div class="col">
+              <h5>
+                <img class="mb-2" src="/static/img/favicon.png" alt="" width="28" height="20">
+                Computer Engineering Capstone
+              </h5>
+              UCSB CE Capstone projects offer students real-world experience in the lifespan of developing an embedded system: identifying a problem, designing to required specifications, managing budgets and printed circuit board fabrication, and delivering their finished product on time.
+              <br><br>
+            </div>
+            <div class="col-md-auto" id="sponsors_picture">
+              <h5>Sponsors</h5>
+              <a href="sponsors"><img src="/static/img/sponsors/all_sponsors.png" alt="" width="250" height="140"></a>
+              <br><br>
+            </div>
+            <div class="col-md-auto">
+              <h5>Contact</h5>
+              <ul class="list-unstyled text-small">
+                <li>Instructor: <a href="https://www.ece.ucsb.edu/~yoga/" target="_blank">Yogananda Isukapalli</a></li>
+                <li>Email: <a href="yoga@ucsb.edu">yoga@ucsb.edu</a></li>
+                <li>Capstone Lab: <a href="https://goo.gl/maps/js6vv6Y7fEnv88rS8" target="_blank">Harold Frank Hall, Room 4118</a></li>
+              </ul>
+              <small class="d-block mb-3 text-muted">&copy; 2019-2020. This website was built using Flask, BootStrap, and GitHub.</small>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <br>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

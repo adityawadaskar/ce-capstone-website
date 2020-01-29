@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../static/header.css">
-    <link rel="stylesheet" href="../static/slider.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='header.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='slider.css')}}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     {% if title %}
     <title>{{ title }}</title>
@@ -56,7 +56,7 @@
     <!-- Top Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="/">
-        <img src="../static/img/favicon.png" width="40" height="30" alt="">
+        <img src="{{url_for('static', filename='img/favicon.png')}}" width="40" height="30" alt="">
         CE Capstone
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,22 +65,22 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item" id="index">
-            <a class="nav-link" href="/index"">Home</a>
+            <a class="nav-link" href="{{ url_for('index') }}">Home</a>
           </li>
           <li class="nav-item" id="schedule">
-            <a class="nav-link" href="/schedule">Schedule</a>
+            <a class="nav-link" href="{{ url_for('schedule') }}">Schedule</a>
           </li>
           <li class="nav-item" id="projects">
-            <a class="nav-link" href="/projects">Projects</a>
+            <a class="nav-link" href="{{ url_for('projects') }}">Projects</a>
           </li>
           <li class="nav-item" id="resources">
-            <a class="nav-link" href="/resources">Resources</a>
+            <a class="nav-link" href="{{ url_for('resources') }}">Resources</a>
           </li>
           <li class="nav-item" id="sponsors">
-            <a class="nav-link" href="/sponsors">Sponsors</a>
+            <a class="nav-link" href="{{ url_for('sponsors') }}">Sponsors</a>
           </li>
           <li class="nav-item" id="capstone-day">
-            <a class="nav-link" href="/capstone-day" target="_blank">Capstone Day</a>
+            <a class="nav-link" href="https://www.ce.ucsb.edu/undergrad/curriculum/capstone/events/ece189" target="_blank">Capstone Day</a>
           </li>
         </ul>
       </div>
@@ -92,7 +92,7 @@
           <div class="row justify-content-md-center text-center">
             <div class="col">
               <h5>
-                <img class="mb-2" src="../static/img/favicon.png" alt="" width="28" height="20">
+                <img class="mb-2" src="{{url_for('static', filename='img/favicon.png')}}" alt="" width="28" height="20">
                 Computer Engineering Capstone
               </h5>
               UCSB CE Capstone projects offer students real-world experience in the lifespan of developing an embedded system: identifying a problem, designing to required specifications, managing budgets and printed circuit board fabrication, and delivering their finished product on time.
@@ -100,7 +100,7 @@
             </div>
             <div class="col-md-auto" id="sponsors_picture">
               <h5>Sponsors</h5>
-              <a href="sponsors"><img src="../static/img/sponsors/all_sponsors.png" alt="" width="250" height="140"></a>
+              <a href="sponsors"><img src="{{url_for('static', filename='img/sponsors/all_sponsors.png')}}" alt="" width="250" height="140"></a>
               <br><br>
             </div>
             <div class="col-md-auto">

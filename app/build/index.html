@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/header.css">
+    <link rel="stylesheet" href="/static/slider.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <title>CE Capstone</title>
+    
+    <script type="text/javascript">
+      window.onload = function () {
+        console.log(window.location.pathname);
+        var pathname = (window.location.pathname).replace('/', '');
+        if (pathname === "" || pathname === "home") {
+          pathname = "index";
+        }
+        if (pathname === "index" || pathname === "sponsors") {
+          // Hide Sponsor footer on index and sponsors pages
+          var sponsors_footer = document.getElementById('sponsors_picture');
+          sponsors_footer.style.display = "none";
+        }
+        // Add link highlight to header for current page
+        var navItem = document.getElementById(pathname);
+        navItem.classList.add('active');
+        // Sponsor slider
+        $(document).ready(function(){
+          $('.customer-logos').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 4
+              }
+            }, {
+              breakpoint: 520,
+              settings: {
+                slidesToShow: 3
+              }
+            }]
+          });
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Top Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">
+        <img src="/static/img/favicon.png" width="40" height="30" alt="">
+        CE Capstone
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" id="index">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item" id="schedule">
+            <a class="nav-link" href="/schedule/">Schedule</a>
+          </li>
+          <li class="nav-item" id="projects">
+            <a class="nav-link" href="/projects/">Projects</a>
+          </li>
+          <li class="nav-item" id="resources">
+            <a class="nav-link" href="/resources/">Resources</a>
+          </li>
+          <li class="nav-item" id="sponsors">
+            <a class="nav-link" href="/sponsors/">Sponsors</a>
+          </li>
+          <li class="nav-item" id="capstone-day">
+            <a class="nav-link" href="https://www.ce.ucsb.edu/undergrad/curriculum/capstone/events/ece189" target="_blank">Capstone Day</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+<header>
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="../static/img/capstone.mp4" type="video/mp4">
+  </video>
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-4">UCSB Computer Engineering Capstone</h1>
+      </div>
+    </div>
+  </div>
+</header>
+<div>
+  <br>
+  <div class="container-sm">
+    <div class="d-flex justify-content-center">
+      <div class="p-2">
+        <h4>Computer Engineering Capstone Projects</h4>
+        <h6>Instructor: Dr. Yogananda Isukapalli</h6>
+        <img src="../static/img/group_pictures/2019.png" class="img-fluid" style="width: 60rem;"><br><br>
+        ECE 189A/B/C is a year-long capstone project course sequence in which Computer Engineering (CE) senior students at UC Santa Barbara design and implement an embedded computer system. Working in small groups of three to five, the teams draw on the strengths of each member, and projects are intended to be the culmination of the students' undergraduate education, incorporating both significant hardware and software components and, in some cases, mechanical components as well. CE Capstone Projects offer students real-world experience in the lifespan of developing an embedded system: identifying a problem, designing to required specifications, managing budgets and printed circuit board fabrication, and delivering their finished product on time. CE capstone projects fall into several categories: 
+        <ol>
+          <li>Student defined: Students come up with the design idea on their own.</li>
+          <li>Industry sponsored: Industry partner specifies a design challenge.</li>
+          <li>Research group: Research group at UCSB poses a design challenge.</li>
+          <li>Competitions:  Students enter as contestants in an organized competition.</li> 
+          <li>Nonprofit organizations: Projects that can be of use for nonprofit organizations.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-dark text-white">
+  <br>
+  <div class="d-flex flex-row flex-wrap justify-content-center container-sm">
+    <div class="p-2">
+      <h5><a href="projects" target="_blank" style="color: inherit; text-decoration: inherit;">Eternal Flight: Winner of 2019 Qualcomm CE Capstone Award</a></h5>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/wcj48JE5Xk4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="p-2">
+      <h5><a href="projects" target="_blank" style="color: inherit; text-decoration: inherit;">Hyperloop: Winner of 2018 SpaceX Levitation Competition</a></h5>
+      <div class="embed-responsive embed-responsive-16by9" style="padding-bottom: 4%;">
+        <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/AsJA7Mei5-o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>
+<div class="container">
+  <br>
+  <div class="container-sm d-flex flex-wrap justify-content-center">
+    <div class="p-2"><h3>Capstone is made possible through the support from our sponsors</h3></div>
+  </div>
+  <div class="container-sm d-flex flex-wrap justify-content-center">
+    <div class="p-2"><h6>Lead Sponsor of CE Capstone Program</h6></div>
+  </div>
+  <div class="container-sm d-flex flex-wrap justify-content-center">
+    <div class="p-2"><a href="https://www.qualcomm.com" target="_blank"><img style="width:40%; height:100%; display: block; margin-left: auto; margin-right: auto;" class="img-fluid" src="../static/img/sponsors/current_sponsors/qualcomm.png"></a></div>
+  </div>
+  <br>
+  <section class="customer-logos slider">
+    
+    <a href="https://www.qualcomm.com/" target="_blank"><div class="slide"><img src="/static/img/sponsors/current_sponsors_resized/qualcomm.png"></div></a>
+    
+    <a href="https://www.alcon.com/" target="_blank"><div class="slide"><img src="/static/img/sponsors/current_sponsors_resized/alcon.png"></div></a>
+    
+    <a href="https://www.sunstone.com/" target="_blank"><div class="slide"><img src="/static/img/sponsors/current_sponsors_resized/sunstone_circuits.png"></div></a>
+    
+    <a href="https://www.navsea.navy.mil/" target="_blank"><div class="slide"><img src="/static/img/sponsors/current_sponsors_resized/navsea.png"></div></a>
+    
+    <a href="http://www.vastcircuits.com/" target="_blank"><div class="slide"><img src="/static/img/sponsors/current_sponsors_resized/vast_circuits.png"></div></a>
+    
+    <a href="https://www.caci.com/" target="_blank"><div class="slide"><img src="/static/img/sponsors/current_sponsors_resized/caci_international.png"></div></a>
+    
+    <a href="https://www.laritech.com/" target="_blank"><div class="slide"><img src="/static/img/sponsors/current_sponsors_resized/laritech.png"></div></a>
+    
+    <a href="https://www.avinc.com/" target="_blank"><div class="slide"><img src="/static/img/sponsors/current_sponsors_resized/aerovironment.png"></div></a>
+    
+    <a href="http://www.aptitudemedical.com/" target="_blank"><div class="slide"><img src="/static/img/sponsors/current_sponsors_resized/aptitude.png"></div></a>
+    
+  </section>
+  <br>
+</div>
+
+    <div class="bg-dark text-white">
+      <div class="container text-center">
+        <footer id="sticky-footer" class="pt-4 my-md-5 pt-md-5 border-top" style="flex-shrink: none;">
+          <div class="row justify-content-md-center text-center">
+            <div class="col">
+              <h5>
+                <img class="mb-2" src="/static/img/favicon.png" alt="" width="28" height="20">
+                Computer Engineering Capstone
+              </h5>
+              UCSB CE Capstone projects offer students real-world experience in the lifespan of developing an embedded system: identifying a problem, designing to required specifications, managing budgets and printed circuit board fabrication, and delivering their finished product on time.
+              <br><br>
+            </div>
+            <div class="col-md-auto" id="sponsors_picture">
+              <h5>Sponsors</h5>
+              <a href="sponsors"><img src="/static/img/sponsors/all_sponsors.png" alt="" width="250" height="140"></a>
+              <br><br>
+            </div>
+            <div class="col-md-auto">
+              <h5>Contact</h5>
+              <ul class="list-unstyled text-small">
+                <li>Instructor: <a href="https://www.ece.ucsb.edu/~yoga/" target="_blank">Yogananda Isukapalli</a></li>
+                <li>Email: <a href="yoga@ucsb.edu">yoga@ucsb.edu</a></li>
+                <li>Capstone Lab: <a href="https://goo.gl/maps/js6vv6Y7fEnv88rS8" target="_blank">Harold Frank Hall, Room 4118</a></li>
+              </ul>
+              <small class="d-block mb-3 text-muted">&copy; 2019-2020. This website was built using Flask, BootStrap, and GitHub.</small>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <br>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

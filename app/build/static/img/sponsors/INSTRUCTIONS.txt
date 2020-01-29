@@ -1,0 +1,10 @@
+Instructions:
+1. Insert high definition logos of current sponsors into the "current_sponsors" directory.
+2. Execute the "format_images.sh" script by typing ./format_images.sh in the command line.
+3. Add the new sponsors and images to the DB.
+
+The format_images.sh script does the following things:
+1. Converts all image formats to .png and removes non .png files.
+2. Creates icon sized images for the sponsor carousel on the home screen.
+3. Appends the contents of current_sponsors to all_sponsors and current_sponsors_resized to all_sponsors_resized.
+
