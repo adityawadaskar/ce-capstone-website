@@ -37,8 +37,12 @@
 </div>
 {% if year_picture %}
 <p></p>
-<div class="d-flex flex-row justify-content-center">
-  <img src="{{ url_for('static', filename=year_picture)}}" class="img-fluid" style="width: 50rem;">
+<div class="container-sm">
+  <div class="d-flex flex-row justify-content-center">
+    <div class="p-2">
+      <img src="{{ url_for('static', filename=year_picture)}}" class="img-fluid" style="width: 50rem;">
+    </div>
+  </div>
 </div>
 {% endif %}
 {% for project in projects %}

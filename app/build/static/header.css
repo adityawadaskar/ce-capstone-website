@@ -55,7 +55,7 @@ header .overlay {
 
 @media (pointer: coarse) and (hover: none) {
   header {
-    background: url('./img/ce-students-2019.png') black no-repeat center center scroll;
+    background: url('./img/group_pictures/2019.png') black no-repeat center center scroll;
   }
   header video {
     display: none;
