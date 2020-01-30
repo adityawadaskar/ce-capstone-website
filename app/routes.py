@@ -4,7 +4,8 @@ from app import app
 from flask import render_template, redirect, send_from_directory, url_for
 from app.models import Student, Project, Sponsor
 
-CURRENT_SPONSORS = "img/sponsors/current_sponsors_resized"
+ALL_SPONSOR_LOGOS = "img/sponsors/all_sponsors_resized"
+CURRENT_SPONSOR_LOGOS = "img/sponsors/current_sponsors_resized"
 STUDENT_IMAGES = "img/students"
 PROJECT_POSTER = "img/projects/poster"
 PROJECT_SLIDES = "img/projects/slides"
@@ -14,14 +15,14 @@ CURRENT_PROJECT_YEAR = 2020
 
 @app.route('/')
 def index():
-    current_sponsors_img_dir = os.path.join(app.root_path, "static/%s" % CURRENT_SPONSORS)
+    current_sponsors_img_dir = os.path.join(app.root_path, "static/%s" % CURRENT_SPONSOR_LOGOS)
     image_filenames = os.listdir(current_sponsors_img_dir)
     sponsors = Sponsor.query.all()
     images = list()
     for filename in image_filenames:
         for sponsor in sponsors:
             if filename == sponsor.logo:
-                images.append({'imgpath': "%s/%s" % (CURRENT_SPONSORS, filename), 'website': sponsor.website})
+                images.append({'imgpath': "%s/%s" % (CURRENT_SPONSOR_LOGOS, filename), 'website': sponsor.website})
     return render_template('index.html', sponsors=images)
 
 @app.route('/schedule/')
@@ -73,7 +74,13 @@ def resources():
 
 @app.route('/sponsors/')
 def sponsors():
-    return render_template('sponsors.html')
+    sponsors = Sponsor.query.order_by(Sponsor.name.asc())
+    current_sponsors = list()
+    for sponsor in sponsors:
+        for project in sponsor.projects:
+            if project.year == CURRENT_PROJECT_YEAR:
+                current_sponsors.append({'project': project.name, 'name': sponsor.name, 'link': sponsor.website, 'logo': "%s/%s" % (CURRENT_SPONSOR_LOGOS, sponsor.logo)})
+    return render_template('sponsors.html', current_sponsors=current_sponsors)
 
 @app.route('/favicon.ico')
 def favicon():

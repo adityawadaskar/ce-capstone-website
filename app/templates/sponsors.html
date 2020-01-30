@@ -1,3 +1,44 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="container">
+  <br>
+  <h4 class="d-flex flex-row justify-content-center">CE Capstone Projects - Sponsors</h4>
+  <h6 class="d-flex flex-row justify-content-center">Dr. Yogananda Isukapalli</h6>
+  <br>
+  <p>
+    The Computer Engineering(CE) capstone program would like to thank all the industry sponsors and partners. Some of our sponsors provide real-world design problems for our students to tackle, and interact with the students throughout the academic year to provide domain-specific knowledge. While some other sponsors closely support and mentor student defined projects. For industry sponsors, sponsoring a capstone project provides a great opportunity to closely work with graduating seniors, and is also a great way to establish a company's presence on UCSB campus.
+  </p>
+  <p>
+    <strong>Student Skill Set:</strong> CE is a joint program between ECE department and Computer Science department. The CE capstone program is the culmination of a Computer Engineering student's Bachelor's degree here at UCSB. It is where these senior level students can utilize the engineering knowledge they have gained over the past three years from both coursework and previous summer internships and apply it to a year long project. All the students share backgrounds in core fundamentals listed below:
+  </p>
+  <ul>
+    <li>Languages: Python, Java, C, C++ and Verilog</li>
+    <li>Data Structures and Algorithms</li>
+    <li>Computer Architecture</li>
+    <li>Circuit Design and Verification</li>
+    <li>Embedded Systems SW/HW Design</li>
+  </ul>
+  <p>
+    The students also have the opportunity to diverge into electives that they find interesting. Depending on the electives they choose, the students have experience in one or more of the fields listed below.
+  </p>
+  <ul>
+    <li>Machine Learning and Deep learning</li>
+    <li>Computer Vision</li>
+    <li>Android Application Development</li>
+    <li>Internet of Things</li>
+    <li>Robotics and Controls</li>
+    <li>Computer Graphics</li>
+    <li>Networking</li>
+    <li>Signal Processing</li>
+  </ul>
+  <p>
+    <strong>Becoming a Sponsor:</strong> To sponsor a project, industry sponsors typically spend the summer coming up with ideas for interesting engineering design projects and work with the instructor to fully define the projects for the students. Potential project sponsors then provide brief project descriptions/problem statements, all of which are circulated to the students prior to the start of the academic year. Students pick the projects in the first week of Fall quarter, and kick-off meetings are held with the sponsors shortly after. Detailed schedule for the rest of the year is posted here. Industry partners can also choose to support student defined projects instead of defining a design project, please contact instructor to find out more details about supporting student project ideas.
+  </p>
+  
+  {% for sponsor in current_sponsors %}
+    <div class="d-flex flex-row justify-content-center">{{ sponsor.project }}: {{sponsor.name}}</div>
+    <div class="d-flex flex-row justify-content-center"><a href="{{sponsor.link}}" target="_blank"><img src="{{url_for('static', filename=sponsor.logo)}}"></a><br></div>
+    <br>
+    {% endfor %}
+</div>
 {% endblock %}
