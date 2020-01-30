@@ -2,10 +2,11 @@ import os
 import copy
 from app import app
 from flask import render_template, redirect, send_from_directory, url_for
+from sqlalchemy import and_
 from app.models import Student, Project, Sponsor
 
-ALL_SPONSOR_LOGOS = "img/sponsors/all_sponsors_resized"
-CURRENT_SPONSOR_LOGOS = "img/sponsors/current_sponsors_resized"
+SPONSOR_LOGOS_LARGE = "img/sponsors/sponsors_large"
+SPONSOR_LOGOS_SMALL = "img/sponsors/sponsors_small"
 STUDENT_IMAGES = "img/students"
 PROJECT_POSTER = "img/projects/poster"
 PROJECT_SLIDES = "img/projects/slides"
@@ -15,15 +16,14 @@ CURRENT_PROJECT_YEAR = 2020
 
 @app.route('/')
 def index():
-    current_sponsors_img_dir = os.path.join(app.root_path, "static/%s" % CURRENT_SPONSOR_LOGOS)
-    image_filenames = os.listdir(current_sponsors_img_dir)
-    sponsors = Sponsor.query.all()
-    images = list()
-    for filename in image_filenames:
-        for sponsor in sponsors:
-            if filename == sponsor.logo:
-                images.append({'imgpath': "%s/%s" % (CURRENT_SPONSOR_LOGOS, filename), 'website': sponsor.website})
-    return render_template('index.html', sponsors=images)
+    projects = Project.query.filter(Project.year==CURRENT_PROJECT_YEAR).all()
+    sponsor_images = list()
+    for project in projects:
+        for sponsor in project.sponsors:
+            sponsor_images.append({'name': sponsor.name, 'website': sponsor.website, 'imgpath': "%s/%s" % (SPONSOR_LOGOS_SMALL, sponsor.logo)})
+    # Remove duplicates
+    sponsor_images = [dict(t) for t in {tuple(d.items()) for d in sponsor_images}]
+    return render_template('index.html', sponsors=sponsor_images)
 
 @app.route('/schedule/')
 def schedule():
@@ -32,8 +32,7 @@ def schedule():
 @app.route('/projects/')
 @app.route('/projects/<int:year>/')
 def projects(year=CURRENT_PROJECT_YEAR):
-    projects = Project.query.filter_by(year=year).all()
-    # projects = copy.deepcopy(projects_orig)
+    projects = Project.query.filter(Project.year==year, Project.students != None).all()#.filter(logo!=None).all()
     for prj in projects:
         if prj.logo and len(prj.logo) > 1:
             prj.logo_path = "%s/%s" % (PROJECT_LOGOS, prj.logo)
@@ -74,13 +73,37 @@ def resources():
 
 @app.route('/sponsors/')
 def sponsors():
-    sponsors = Sponsor.query.order_by(Sponsor.name.asc())
-    current_sponsors = list()
-    for sponsor in sponsors:
-        for project in sponsor.projects:
-            if project.year == CURRENT_PROJECT_YEAR:
-                current_sponsors.append({'project': project.name, 'name': sponsor.name, 'link': sponsor.website, 'logo': "%s/%s" % (CURRENT_SPONSOR_LOGOS, sponsor.logo)})
-    return render_template('sponsors.html', current_sponsors=current_sponsors)
+
+    projects = Project.query.order_by(Project.year.desc())
+    year = projects[0].year
+    year_dict = {'year': year, 'sponsors': list()}
+    all_sponsors = list()
+    for project in projects:
+        if project.year != year:
+            year = project.year
+            all_sponsors.append(year_dict)
+            year_dict = {'year': year, 'sponsors': list()}
+
+        sponsors = project.sponsors
+        for sponsor in sponsors:
+            sponsor_in_year = False
+            for yearly_sponsor in year_dict['sponsors']:
+                if sponsor.name == yearly_sponsor['name']:
+                    yearly_sponsor['project'] += " and " + project.name
+                    sponsor_in_year = True
+
+            if not sponsor_in_year:
+                year_dict['sponsors'].append({
+                    'project': project.name,
+                    'name': sponsor.name,
+                    'link': sponsor.website,
+                    'logo': "%s/%s" % (SPONSOR_LOGOS_SMALL, sponsor.logo),
+                    'logo_large': "%s/%s" % (SPONSOR_LOGOS_LARGE, sponsor.logo),
+                    'student_project': project.student_project})
+
+    all_sponsors.append(year_dict)
+
+    return render_template('sponsors.html', yearly_sponsors=all_sponsors)
 
 @app.route('/favicon.ico')
 def favicon():

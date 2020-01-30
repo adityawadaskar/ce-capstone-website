@@ -37,6 +37,7 @@ class Project(db.Model):
     website = db.Column(db.String(400))
     presentation = db.Column(db.String(400))
     poster = db.Column(db.String(400))
+    student_project = db.Column(db.Boolean)
     team_leads = db.relationship('Student', secondary=team_leads_projects, back_populates='projects')
     students = db.relationship('Student', secondary=students_projects, back_populates='projects')
     sponsors = db.relationship('Sponsor', secondary=projects_sponsors, back_populates='projects')

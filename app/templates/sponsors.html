@@ -34,11 +34,40 @@
   <p>
     <strong>Becoming a Sponsor:</strong> To sponsor a project, industry sponsors typically spend the summer coming up with ideas for interesting engineering design projects and work with the instructor to fully define the projects for the students. Potential project sponsors then provide brief project descriptions/problem statements, all of which are circulated to the students prior to the start of the academic year. Students pick the projects in the first week of Fall quarter, and kick-off meetings are held with the sponsors shortly after. Detailed schedule for the rest of the year is posted here. Industry partners can also choose to support student defined projects instead of defining a design project, please contact instructor to find out more details about supporting student project ideas.
   </p>
-  
-  {% for sponsor in current_sponsors %}
-    <div class="d-flex flex-row justify-content-center">{{ sponsor.project }}: {{sponsor.name}}</div>
-    <div class="d-flex flex-row justify-content-center"><a href="{{sponsor.link}}" target="_blank"><img src="{{url_for('static', filename=sponsor.logo)}}"></a><br></div>
+  <h3 class="d-flex justify-content-center text-center">Lead Sponsor of CE Capstone Program: Qualcomm</h3>
+  <div class="d-flex justify-content-center"><a href="https://www.qualcomm.com" target="_blank"><img class="img-fluid" src="{{url_for('static', filename='img/sponsors/sponsors_large/qualcomm.png')}}"></a></div><br>
+  <h3 class="d-flex justify-content-center text-center">{{yearly_sponsors[0]['year']-1}}-{{yearly_sponsors[0]['year']}}: Project Sponsors</h3><br>
+  {% for sponsor in yearly_sponsors[0]['sponsors'] %}
+    {% if sponsor.student_project %}
+    <h5 class="d-flex justify-content-center text-center">{{ sponsor.project }}: {{sponsor.name}}</h5>
+    <div class="d-flex justify-content-center">
+      {% if sponsor.link %}
+      <a href="{{sponsor.link}}" target="_blank"><img class="img-fluid" src="{{url_for('static', filename=sponsor.logo_large)}}"></a>
+      {% else %}
+      <img class="img-fluid" src="{{url_for('static', filename=sponsor.logo_large)}}">
+      {% endif %}
+      <br>
+    </div>
     <br>
+    {% endif %}
+  {% endfor %}
+  <br>
+  {% for year in yearly_sponsors %}
+  <div class="d-flex flex-row justify-content-center">
+    <h4>{{year['year']-1}}-{{year['year']}} Sponsors</h4>
+  </div>
+  <div class="d-flex flex-row justify-content-center flex-wrap">
+    {% for sponsor in year['sponsors'] %}
+    <div class="p-2">
+      {% if sponsor.link %}
+      <a href="{{sponsor.link}}" target="_blank"><img src="{{url_for('static', filename=sponsor.logo)}}"></a>
+      {% else %}
+      <img src="{{url_for('static', filename=sponsor.logo)}}">
+      {% endif %}
+    </div>
     {% endfor %}
+  </div>
+  <br>
+  {% endfor %}
 </div>
 {% endblock %}
