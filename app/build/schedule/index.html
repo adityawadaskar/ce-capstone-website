@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/static/header.css">
     <link rel="stylesheet" href="/static/slider.css">
+    <link rel="stylesheet" href="/static/timeline.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     
     <title>CE Capstone</title>
@@ -12,7 +13,8 @@
     <script type="text/javascript">
       window.onload = function () {
         console.log(window.location.pathname);
-        var pathname = (window.location.pathname).replace('/', '');
+        var pathname = (window.location.pathname).split('/').join('');
+        console.log(pathname);
         if (pathname === "" || pathname === "home") {
           pathname = "index";
         }
@@ -84,101 +86,192 @@
       </div>
     </nav>
     
-<!-- Timeline -->
-<div class="row">
-    <div class="col-md-12">
-      <div class="timeline-main">
-        <!-- Timeline Wrapper -->
-        <ul class="stepper stepper-vertical timeline timeline-simple pl-0">
-  
-          <li>
-            <!--Section Title -->
-            <a href="#!">
-              <span class="circle grey"></span>
-            </a>
-  
-            <!-- Section Description -->
-            <div class="step-content ml-3 p-4 hoverable">
-              <h4 class="font-weight-bold">Ut enim ad minim veniam</h4>
-              <p class="text-muted mt-3"><i class="far fa-clock" aria-hidden="true"></i> 2017</p>
-              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-          </li>
-          <li class="timeline-inverted">
-            <!--Section Title -->
-            <a href="#!">
-              <span class="circle grey"></span>
-            </a>
-  
-            <!-- Section Description -->
-            <div class="step-content mr-xl-3 p-4 hoverable">
-              <h4 class="font-weight-bold">Duis aute irure dolor</h4>
-              <p class="text-muted mt-3"><i class="far fa-clock" aria-hidden="true"></i> 2016</p>
-              <p class="mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-                sequi nesciunt.</p>
-            </div>
-          </li>
-          <li>
-            <!--Section Title -->
-            <a href="#!">
-              <span class="circle grey"></span>
-            </a>
-  
-            <!-- Section Description -->
-            <div class="step-content ml-3 p-4 hoverable">
-              <h4 class="font-weight-bold">Sed ut nihil unde omnis</h4>
-              <p class="text-muted mt-3"><i class="far fa-clock" aria-hidden="true"></i> 2015</p>
-              <p class="mb-0">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
-                aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-                suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure
-                reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui
-                dolorem eum fugiat quo voluptas nulla pariatur?</p>
-            </div>
-          </li>
-          <li class="timeline-inverted">
-            <!--Section Title -->
-            <a href="#!">
-              <span class="circle grey"></span>
-            </a>
-  
-            <!-- Section Description -->
-            <div class="step-content mr-xl-3 p-4 hoverable">
-              <h4 class="font-weight-bold"> Quis autem vel eum voluptate</h4>
-              <p class="text-muted mt-3"><i class="far fa-clock" aria-hidden="true"></i> 2014</p>
-              <p class="mb-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi,
-                id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-            </div>
-          </li>
-          <li>
-            <!--Section Title -->
-            <a href="#!">
-              <span class="circle grey"></span>
-            </a>
-  
-            <!-- Section Description -->
-            <div class="step-content ml-3 p-4 hoverable">
-              <h4 class="font-weight-bold">Mussum ipsum cacilds</h4>
-              <p class="text-muted mt-3"><i class="far fa-clock" aria-hidden="true"></i> 2013</p>
-              <p class="mb-0">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-                eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic
-                tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut
-                perferendis doloribus asperiores repellat.</p>
-            </div>
-          </li>
-        </ul>
-        <!-- Timeline Wrapper -->
-      </div>
-    </div>
+ <div class="container">
+  <br>
+  <h3 class="d-flex flex-row justify-content-center">CE Capstone Projects - Schedule</h3>
+  <h6 class="d-flex flex-row justify-content-center">Dr. Yogananda Isukapalli</h6>
+  <br>
+  <div>
+    <p>
+      During the Fall quarter of this course sequence, student groups choose a project, define and refine a description of its external behavior, then launch into the hardware design phase. By the end of fall quarter, using industry standard Computer Aided Design tools, they have produced detailed hardware schematics, fabrication-ready printed circuit board artwork, and complete component kits and associated documentation necessary for prototype assembly. An organized project notebook describing all aspects of the project as well as formal design reviews/presentations and the use of professional project management software complete the initial portion of the capstone design experience.
+    </p>
+    <p>
+      All students are expected to submit a weekly report describing their specific individual contribution to the project in that week. Instructor will discuss the details of weekly report with the students in the weekly meeting. At the end of each quarter, all groups have to present/demo their project in front of the whole class.
+    </p>
+    <p>
+      During winter quarter, the printed circuit boards (PCB) are fabricated and assembled. While the PCB is getting ready, the focus shifts to software development on a development kit that is closest to the custom hardware and any mechanical components are acquired and/or manufactured and assembled. Once the hardware design is validated and the software and mechanical development efforts are completed, the final project prototype is integrated, tested and verified. A succession of milestones, reviews and presentations ensures that project completion occur in a timely and successful manner.
+    </p>
+    <p>
+      At the end of spring quarter, each project team participates in the Computer Engineering portion of the Senior Capstone Project Presentation Day. During the day long event, the groups display posters highlighting their projects' features and operation and conduct a public presentation and demonstration of the completed projects. 
+    </p>
+    <h3 class="d-flex flex-row justify-content-center">Course Milestones</h3>
+    <p></p>
+    <h5 class="d-flex flex-row justify-content-center"><strong>Fall Quarter</strong></h5>
+    <ul class="timeline">
+      <li>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h5 class="timeline-title"><strong>Project Idea and Team Formation</strong></h5>
+          </div>
+          <div class="timeline-body">
+            <p>List of team members, conceptual drawing and brief overview "datasheet" of the project with preliminary block diagram.</p>
+          </div>
+        </div>
+        <div class="timeline-badge"></div>
+      </li>
+      <li class="timeline-inverted">
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <small>Week 2</small>
+            <h5 class="timeline-title"><strong>Refined Project</strong></h5>
+          </div>
+          <div class="timeline-body">
+            <p>Annotated block diagram, external behavioral specification and identification of the role to be played by each team member.</p>
+          </div>
+        </div>
+        <div class="timeline-badge"></div>
+      </li>
+      <li>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h5 class="timeline-title"><strong>System-level Design</strong></h5>
+          </div>
+          <div class="timeline-body">
+            <p>Subsystem requirements & specifications, software flow, and interface specs. </p>
+          </div>
+        </div>
+        <div class="timeline-badge"></div>
+      </li>
+      <li class="timeline-inverted">
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h5 class="timeline-title"><strong>Detailed Design</strong></h5>
+          </div>
+          <div class="timeline-body">
+            <p>Schematic drawings, and (if programmable logic is being used) Verilog or VHDL sources with both functional and timing simulations.</p>
+            <p>Software development begins on a development kit that is closest to the custom hardware.</p>
+          </div>
+        </div>
+        <div class="timeline-badge"></div>
+      </li>
+      <li>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h5 class="timeline-title"><strong>Implementation of the Hardware Design</strong></h5>
+          </div>
+          <div class="timeline-body">
+            <p>Artwork for fabricating the printed circuit board (PCB), including Gerber plots, final schematics, engineering drawing, assembly drawing. Submittal of Gerber files to Sunstone Circuits.</p>
+          </div>
+        </div>
+        <div class="timeline-badge"></div>
+      </li>
+    </ul>
+    <h5 class="d-flex flex-row justify-content-center"><strong>Winter Quarter</strong></h5>
+    <ul class="timeline">
+      <li>
+        <div class="timeline-panel">
+          <div class="timeline-body">
+            <p>
+              Software development on a development kit that is closest to the custom hardware. Procurement of components for PCB's, creation of complete assembly kits.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-badge"></div>
+      </li>
+      <li class="timeline-inverted">
+        <div class="timeline-panel">
+          <div class="timeline-body">
+            <p>Printed Circuit Board fabrication returns.</p>
+          </div>
+        </div>
+        <div class="timeline-badge"></div>
+      </li>
+      <li>
+        <div class="timeline-panel">
+          <div class="timeline-body">
+            <p>PCB should be sent for assembly. Assembly kit should have: bagged parts, assembly drawing and Bill of Materials.</p>
+          </div>
+        </div>
+        <div class="timeline-badge"></div>
+      </li>
+      <li class="timeline-inverted">
+        <div class="timeline-panel">
+          <div class="timeline-body">
+            <p>Assembled PCB returns, software development continues. </p>
+          </div>
+        </div>
+        <div class="timeline-badge"></div>
+      </li>
+      <li>
+        <div class="timeline-panel">
+          <div class="timeline-body">
+            <p>Apply power to board with no shorts, correct regulated voltages, currents within spec, etc.</p>
+          </div>
+        </div>
+        <div class="timeline-badge"></div>
+      </li>
+      <li class="timeline-inverted">
+        <div class="timeline-panel">
+          <div class="timeline-body">
+            <p>Demonstrate execution of user code via the 'Hello World' program, flashing LED', etc.</p>
+          </div>
+        </div>
+        <div class="timeline-badge"></div>
+      </li>
+    </ul>
+    <h5 class="d-flex flex-row justify-content-center"><strong>Spring Quarter</strong></h5>
+    <ul class="timeline">
+      <li>
+        <div class="timeline-panel">
+          <div class="timeline-body">
+            <p>In spring quarter most of the focus will be on software development. main() with infinite loop; polling/interrupt structure of peripheral control demonstrated.</p>
+          </div>
+        </div>
+        <div class="timeline-badge"></div>
+      </li>
+      <li class="timeline-inverted">
+        <div class="timeline-panel">
+          <div class="timeline-body">
+            <p>Independent software control of all sensors, motors, wireless, displays, etc. Systems exercised and communicating through common main().</p>
+          </div>
+        </div>
+        <div class="timeline-badge"></div>
+      </li>
+      <li>
+        <div class="timeline-panel">
+          <div class="timeline-body">
+            <p>Final integration of 'Controls Indicators & Interconnect' and full system operation.</p>
+          </div>
+        </div>
+        <div class="timeline-badge"></div>
+      </li>
+      <li class="timeline-inverted">
+        <div class="timeline-panel">
+          <div class="timeline-body">
+            <p>Test the system extensively and prepare for final presentation and demo of the project.</p>
+          </div>
+        </div>
+        <div class="timeline-badge"></div>
+      </li>
+      <li>
+        <div class="timeline-panel">
+          <div class="timeline-body">
+            <p>Work on presentation material: Posters, demo videos, website and final presentation slides.</p>
+          </div>
+        </div>
+        <div class="timeline-badge"></div>
+      </li>
+      <li class="timeline-inverted">
+        <div class="timeline-panel">
+          <div class="timeline-body">
+            <p><strong>Capstone Presentation Day!</strong></p>
+          </div>
+        </div>
+        <div class="timeline-badge"></div>
+      </li>
+    </ul>
   </div>
-  <!-- Timeline -->
+</div>
 
     <div class="bg-dark text-white">
       <div class="container text-center">
