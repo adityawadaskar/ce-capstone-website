@@ -19,7 +19,7 @@ class Student(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), index=True)
     image = db.Column(db.String(400))
-    linkedin = db.Column(db.String(400))
+    website = db.Column(db.String(400))
     projects = db.relationship('Project', secondary=students_projects, back_populates='students')
     projects_leading = db.relationship('Project', secondary=team_leads_projects, back_populates='students')
 

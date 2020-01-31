@@ -44,6 +44,14 @@
             background-color: #ff9933;
         }
 
+        .week {
+            padding-bottom: 8px;
+        }
+
+        .week_left {
+            text-align: right;
+        }
+
         .timeline > li > .timeline-panel {
             background-color: #cccccc;
             width: 46%;
@@ -175,6 +183,10 @@
     ul.timeline > li > .timeline-panel {
         float: right;
     }
+
+        .week_left {
+            text-align: left;
+        }
 
         ul.timeline > li > .timeline-panel:before {
             border-left-width: 0;

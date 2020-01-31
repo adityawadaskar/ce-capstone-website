@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="/static/slider.css">
     <link rel="stylesheet" href="/static/timeline.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+    .dropdown:hover .dropdown-menu {
+      display: block !important;
+    }
+    </style>
     
     <title>CE Capstone</title>
     
@@ -70,9 +75,39 @@
           <li class="nav-item" id="schedule">
             <a class="nav-link" href="/schedule/">Schedule</a>
           </li>
-          <li class="nav-item" id="projects">
-            <a class="nav-link" href="/projects/">Projects</a>
+          <li class="nav-item dropdown" id="projects">
+            <a class="nav-link dropdown-toggle" href="/projects/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Projects
+            </a>
+            <div class="dropdown-menu" style="min-width: 0px;" aria-labelledby="navbarDropdown">
+              
+              <a class="dropdown-item" href="/projects/2020/">2020</a>
+              
+              <a class="dropdown-item" href="/projects/2019/">2019</a>
+              
+              <a class="dropdown-item" href="/projects/2018/">2018</a>
+              
+              <a class="dropdown-item" href="/projects/2017/">2017</a>
+              
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2016.pdf">2016</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2015.pdf">2015</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2014.pdf">2014</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2013.pdf">2013</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2012.pdf">2012</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2011.pdf">2011</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2010.pdf">2010</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2009.pdf">2009</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2008.pdf">2008</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2007.pdf">2007</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2006.pdf">2006</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2005.pdf">2005</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2004.pdf">2004</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2003.pdf">2003</a>
+            </div>
           </li>
+
+
           <li class="nav-item" id="resources">
             <a class="nav-link" href="/resources/">Resources</a>
           </li>
@@ -146,28 +181,28 @@
     <div class="p-2"><h6>Lead Sponsor of CE Capstone Program</h6></div>
   </div>
   <div class="container-sm d-flex flex-wrap justify-content-center">
-    <div class="p-2"><a href="https://www.qualcomm.com" target="_blank"><img style="width:40%; height:100%; display: block; margin-left: auto; margin-right: auto;" class="img-fluid" src="../static/img/sponsors/current_sponsors/qualcomm.png"></a></div>
+    <div class="p-2"><a href="https://www.qualcomm.com" target="_blank"><img style="width:40%; height:100%; display: block; margin-left: auto; margin-right: auto;" class="img-fluid" src="/static/img/sponsors/sponsors_original/qualcomm.png"></a></div>
   </div>
   <br>
   <section class="customer-logos slider">
-    
-    <a href="https://www.alcon.com/" target="_blank"><div class="slide"><img src="/static/img/sponsors/sponsors_small/alcon.png"></div></a>
-    
-    <a href="https://www.avinc.com/" target="_blank"><div class="slide"><img src="/static/img/sponsors/sponsors_small/aerovironment.png"></div></a>
     
     <a href="https://www.caci.com/" target="_blank"><div class="slide"><img src="/static/img/sponsors/sponsors_small/caci_international.png"></div></a>
     
     <a href="http://www.aptitudemedical.com/" target="_blank"><div class="slide"><img src="/static/img/sponsors/sponsors_small/aptitude.png"></div></a>
     
-    <a href="https://www.sunstone.com/" target="_blank"><div class="slide"><img src="/static/img/sponsors/sponsors_small/sunstone_circuits.png"></div></a>
-    
-    <a href="https://www.navsea.navy.mil/" target="_blank"><div class="slide"><img src="/static/img/sponsors/sponsors_small/navsea.png"></div></a>
+    <a href="https://www.qualcomm.com/" target="_blank"><div class="slide"><img src="/static/img/sponsors/sponsors_small/qualcomm.png"></div></a>
     
     <a href="https://labs.eemb.ucsb.edu/oakley/todd/" target="_blank"><div class="slide"><img src="/static/img/sponsors/sponsors_small/oakley_lab.png"></div></a>
     
+    <a href="https://www.navsea.navy.mil/" target="_blank"><div class="slide"><img src="/static/img/sponsors/sponsors_small/navsea.png"></div></a>
+    
+    <a href="https://www.avinc.com/" target="_blank"><div class="slide"><img src="/static/img/sponsors/sponsors_small/aerovironment.png"></div></a>
+    
     <a href="http://www.vastcircuits.com/" target="_blank"><div class="slide"><img src="/static/img/sponsors/sponsors_small/vast_circuits.png"></div></a>
     
-    <a href="https://www.qualcomm.com/" target="_blank"><div class="slide"><img src="/static/img/sponsors/sponsors_small/qualcomm.png"></div></a>
+    <a href="https://www.sunstone.com/" target="_blank"><div class="slide"><img src="/static/img/sponsors/sponsors_small/sunstone_circuits.png"></div></a>
+    
+    <a href="https://www.alcon.com/" target="_blank"><div class="slide"><img src="/static/img/sponsors/sponsors_small/alcon.png"></div></a>
     
   </section>
   <br>
@@ -187,15 +222,15 @@
             </div>
             <div class="col-md-auto" id="sponsors_picture">
               <h5>Sponsors</h5>
-              <a href="sponsors"><img src="/static/img/sponsors/all_sponsors.png" alt="" width="250" height="140"></a>
+              <a href="/sponsors/"><img src="/static/img/sponsors/all_sponsors.png" alt="" width="250" height="140"></a>
               <br><br>
             </div>
             <div class="col-md-auto">
               <h5>Contact</h5>
               <ul class="list-unstyled text-small">
-                <li>Instructor: <a href="https://www.ece.ucsb.edu/~yoga/" target="_blank">Yogananda Isukapalli</a></li>
-                <li>Email: <a href="yoga@ucsb.edu">yoga@ucsb.edu</a></li>
-                <li>Capstone Lab: <a href="https://goo.gl/maps/js6vv6Y7fEnv88rS8" target="_blank">Harold Frank Hall, Room 4118</a></li>
+                <li>Instructor: <a href="https://www.ece.ucsb.edu/~yoga/" target="_blank" style="color: #80aaff;">Yogananda Isukapalli</a></li>
+                <li>Email: <a href="yoga@ucsb.edu" style="color: #80aaff;">yoga@ucsb.edu</a></li>
+                <li>Capstone Lab: <a href="https://goo.gl/maps/js6vv6Y7fEnv88rS8" target="_blank" style="color: #80aaff;">Harold Frank Hall, Room 4118</a></li>
               </ul>
               <small class="d-block mb-3 text-muted">&copy; 2019-2020. This website was built using Flask, BootStrap, and GitHub.</small>
             </div>

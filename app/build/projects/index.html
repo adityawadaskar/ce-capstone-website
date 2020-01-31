@@ -7,8 +7,13 @@
     <link rel="stylesheet" href="/static/slider.css">
     <link rel="stylesheet" href="/static/timeline.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+    .dropdown:hover .dropdown-menu {
+      display: block !important;
+    }
+    </style>
     
-    <title>CE Capstone</title>
+    <title>CE Capstone - Projects</title>
     
     <script type="text/javascript">
       window.onload = function () {
@@ -70,9 +75,39 @@
           <li class="nav-item" id="schedule">
             <a class="nav-link" href="/schedule/">Schedule</a>
           </li>
-          <li class="nav-item" id="projects">
-            <a class="nav-link" href="/projects/">Projects</a>
+          <li class="nav-item dropdown" id="projects">
+            <a class="nav-link dropdown-toggle" href="/projects/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Projects
+            </a>
+            <div class="dropdown-menu" style="min-width: 0px;" aria-labelledby="navbarDropdown">
+              
+              <a class="dropdown-item" href="/projects/2020/">2020</a>
+              
+              <a class="dropdown-item" href="/projects/2019/">2019</a>
+              
+              <a class="dropdown-item" href="/projects/2018/">2018</a>
+              
+              <a class="dropdown-item" href="/projects/2017/">2017</a>
+              
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2016.pdf">2016</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2015.pdf">2015</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2014.pdf">2014</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2013.pdf">2013</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2012.pdf">2012</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2011.pdf">2011</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2010.pdf">2010</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2009.pdf">2009</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2008.pdf">2008</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2007.pdf">2007</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2006.pdf">2006</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2005.pdf">2005</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2004.pdf">2004</a>
+              <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2003.pdf">2003</a>
+            </div>
           </li>
+
+
           <li class="nav-item" id="resources">
             <a class="nav-link" href="/resources/">Resources</a>
           </li>
@@ -86,41 +121,49 @@
       </div>
     </nav>
     
+<style>
+/* .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+ } */
+</style>
 <div style="background:  #e6ecff;">
 <br>
-<h3 class="d-flex flex-row justify-content-center">CE Capstone Projects</h3>
-<div class="d-flex flex-row justify-content-center">
+<h3 class="d-flex flex-row justify-content-center text-center">CE Capstone - Projects</h3>
+<h5 class="d-flex flex-row justify-content-center text-center">2019-2020</h5>
+<!-- <div class="d-flex flex-row justify-content-center">
   <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      2019-2020
+      2020
     </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <div class="dropdown-menu" style="min-width: 0px;" aria-labelledby="dropdownMenuButton">
       
-      <a class="dropdown-item" href="/projects/2020/">2019-2020</a>
+      <a class="dropdown-item" href="/projects/2020/">2020</a>
       
-      <a class="dropdown-item" href="/projects/2019/">2018-2019</a>
+      <a class="dropdown-item" href="/projects/2019/">2019</a>
       
-      <a class="dropdown-item" href="/projects/2018/">2017-2018</a>
+      <a class="dropdown-item" href="/projects/2018/">2018</a>
       
-      <a class="dropdown-item" href="/projects/2017/">2016-2017</a>
+      <a class="dropdown-item" href="/projects/2017/">2017</a>
       
-      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2016.pdf">2015-2016</a>
-      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2015.pdf">2014-2015</a>
-      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2014.pdf">2013-2014</a>
-      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2013.pdf">2012-2013</a>
-      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2012.pdf">2011-2012</a>
-      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2011.pdf">2010-2011</a>
-      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2010.pdf">2009-2010</a>
-      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2009.pdf">2008-2009</a>
-      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2008.pdf">2007-2008</a>
-      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2007.pdf">2006-2007</a>
-      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2006.pdf">2005-2006</a>
-      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2005.pdf">2004-2005</a>
-      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2004.pdf">2003-2004</a>
-      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2003.pdf">2002-2003</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2016.pdf">2016</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2015.pdf">2015</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2014.pdf">2014</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2013.pdf">2013</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2012.pdf">2012</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2011.pdf">2011</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2010.pdf">2010</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2009.pdf">2009</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2008.pdf">2008</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2007.pdf">2007</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2006.pdf">2006</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2005.pdf">2005</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2004.pdf">2004</a>
+      <a class="dropdown-item" target="_blank" href="/static/img/projects/archive/projects_2003.pdf">2003</a>
     </div>
   </div>
-</div>
+</div> -->
 <p></p>
 <div class="d-flex flex-row flex-wrap justify-content-center">
   
@@ -159,37 +202,37 @@
       <h5 class="text-center">Members</h5>
       <div class="d-flex flex-row flex-wrap justify-content-center">
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Crystal Eskander</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Jerry Liu</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Lekha Adari</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Lillian Liu</span>
           </div>
-        </a>
+          
         
       </div>
       <p></p>
@@ -230,37 +273,37 @@
       <h5 class="text-center">Members</h5>
       <div class="d-flex flex-row flex-wrap justify-content-center">
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Jeff Longo</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Chris Chan</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Griffin Danninger</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Zach Battles</span>
           </div>
-        </a>
+          
         
       </div>
       <p></p>
@@ -301,29 +344,29 @@
       <h5 class="text-center">Members</h5>
       <div class="d-flex flex-row flex-wrap justify-content-center">
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Byron Aguilar</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Boning Dong</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Cesar Gonzalez</span>
           </div>
-        </a>
+          
         
       </div>
       <p></p>
@@ -357,21 +400,21 @@
       <h5 class="text-center">Members</h5>
       <div class="d-flex flex-row flex-wrap justify-content-center">
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Xinyuan Zhang</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Vanessa Mejia</span>
           </div>
-        </a>
+          
         
       </div>
       <p></p>
@@ -405,37 +448,37 @@
       <h5 class="text-center">Members</h5>
       <div class="d-flex flex-row flex-wrap justify-content-center">
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Weiyun Jiang</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Alexis Yang</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Jiajun Wan</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Ning Du</span>
           </div>
-        </a>
+          
         
       </div>
       <p></p>
@@ -469,29 +512,29 @@
       <h5 class="text-center">Members</h5>
       <div class="d-flex flex-row flex-wrap justify-content-center">
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Trenton Rochelle</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Justin Hemphill</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Ziming Qi</span>
           </div>
-        </a>
+          
         
       </div>
       <p></p>
@@ -532,37 +575,37 @@
       <h5 class="text-center">Members</h5>
       <div class="d-flex flex-row flex-wrap justify-content-center">
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Rick Franc</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Nathan Bornfreund</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Steven Landis</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Willy Tu</span>
           </div>
-        </a>
+          
         
       </div>
       <p></p>
@@ -604,29 +647,29 @@
       <h5 class="text-center">Members</h5>
       <div class="d-flex flex-row flex-wrap justify-content-center">
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Jiyu Zhou</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Dom Jiang</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Prabal Saha</span>
           </div>
-        </a>
+          
         
       </div>
       <p></p>
@@ -667,29 +710,29 @@
       <h5 class="text-center">Members</h5>
       <div class="d-flex flex-row flex-wrap justify-content-center">
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Matthew Dupree</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Xihan Liu</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Yingchao Zhu</span>
           </div>
-        </a>
+          
         
       </div>
       <p></p>
@@ -730,21 +773,21 @@
       <h5 class="text-center">Members</h5>
       <div class="d-flex flex-row flex-wrap justify-content-center">
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Yini Wang</span>
           </div>
-        </a>
+          
         
-        <a href="None" target="_blank" style="text-decoration: none;">
+          
           <div class="p-2 text-center">
             <img class="img-fluid rounded-circle" style="max-width: 100px;" src="/static/img/students/ucsb_placeholder.jpg">
             <br>
             <span style="text-decoration: none; color: black;">Ran Mo</span>
           </div>
-        </a>
+          
         
       </div>
       <p></p>
@@ -789,15 +832,15 @@
             </div>
             <div class="col-md-auto" id="sponsors_picture">
               <h5>Sponsors</h5>
-              <a href="sponsors"><img src="/static/img/sponsors/all_sponsors.png" alt="" width="250" height="140"></a>
+              <a href="/sponsors/"><img src="/static/img/sponsors/all_sponsors.png" alt="" width="250" height="140"></a>
               <br><br>
             </div>
             <div class="col-md-auto">
               <h5>Contact</h5>
               <ul class="list-unstyled text-small">
-                <li>Instructor: <a href="https://www.ece.ucsb.edu/~yoga/" target="_blank">Yogananda Isukapalli</a></li>
-                <li>Email: <a href="yoga@ucsb.edu">yoga@ucsb.edu</a></li>
-                <li>Capstone Lab: <a href="https://goo.gl/maps/js6vv6Y7fEnv88rS8" target="_blank">Harold Frank Hall, Room 4118</a></li>
+                <li>Instructor: <a href="https://www.ece.ucsb.edu/~yoga/" target="_blank" style="color: #80aaff;">Yogananda Isukapalli</a></li>
+                <li>Email: <a href="yoga@ucsb.edu" style="color: #80aaff;">yoga@ucsb.edu</a></li>
+                <li>Capstone Lab: <a href="https://goo.gl/maps/js6vv6Y7fEnv88rS8" target="_blank" style="color: #80aaff;">Harold Frank Hall, Room 4118</a></li>
               </ul>
               <small class="d-block mb-3 text-muted">&copy; 2019-2020. This website was built using Flask, BootStrap, and GitHub.</small>
             </div>

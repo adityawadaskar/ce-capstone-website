@@ -44,7 +44,7 @@ def upgrade():
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('name', sa.String(length=64), nullable=True),
     sa.Column('image', sa.String(length=400), nullable=True),
-    sa.Column('linkedin', sa.String(length=400), nullable=True),
+    sa.Column('website', sa.String(length=400), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_student_name'), 'student', ['name'], unique=False)

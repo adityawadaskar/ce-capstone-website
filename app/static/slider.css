@@ -27,7 +27,12 @@ h2{
           touch-action: pan-y;
       -webkit-tap-highlight-color: transparent;
   }
-  
+    .slick-frame {
+        visibility: hidden;
+    }
+    .slick-frame.slick-initialized {
+        visibility: visible;
+    }
   .slick-list
   {
       position: relative;

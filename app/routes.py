@@ -23,11 +23,11 @@ def index():
             sponsor_images.append({'name': sponsor.name, 'website': sponsor.website, 'imgpath': "%s/%s" % (SPONSOR_LOGOS_SMALL, sponsor.logo)})
     # Remove duplicates
     sponsor_images = [dict(t) for t in {tuple(d.items()) for d in sponsor_images}]
-    return render_template('index.html', sponsors=sponsor_images)
+    return render_template('index.html', sponsors=sponsor_images, current_year=CURRENT_PROJECT_YEAR, title="CE Capstone")
 
 @app.route('/schedule/')
 def schedule():
-    return render_template('schedule.html')
+    return render_template('schedule.html', current_year=CURRENT_PROJECT_YEAR, title="CE Capstone - Schedule")
 
 @app.route('/projects/')
 @app.route('/projects/<int:year>/')
@@ -57,7 +57,7 @@ def projects(year=CURRENT_PROJECT_YEAR):
     
     year_picture = find_year_picture(year)
 
-    return render_template('projects.html', projects=projects, year=year, current_year=CURRENT_PROJECT_YEAR, year_picture=year_picture)
+    return render_template('projects.html', projects=projects, year=year, current_year=CURRENT_PROJECT_YEAR, year_picture=year_picture, title="CE Capstone - Projects")
 
 def find_year_picture(year):
     path = os.path.join(app.root_path, "static/%s" % GROUP_PICTURES)
@@ -69,7 +69,7 @@ def find_year_picture(year):
 
 @app.route('/resources/')
 def resources():
-    return render_template('resources.html')
+    return render_template('resources.html', current_year=CURRENT_PROJECT_YEAR, title="CE Capstone - Resources")
 
 @app.route('/sponsors/')
 def sponsors():
@@ -103,7 +103,7 @@ def sponsors():
 
     all_sponsors.append(year_dict)
 
-    return render_template('sponsors.html', yearly_sponsors=all_sponsors)
+    return render_template('sponsors.html', yearly_sponsors=all_sponsors, current_year=CURRENT_PROJECT_YEAR, title="CE Capstone - Sponsors")
 
 @app.route('/favicon.ico')
 def favicon():
