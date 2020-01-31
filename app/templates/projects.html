@@ -1,21 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 <style>
-/* .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0; // remove the gap so it doesn't close
- } */
+  /* .project_div {
+    box-shadow: 0 0 10px rgba(80,80,80,.2); 
+  } */
 </style>
-<div style="background:  #e6ecff;">
+<div style="background-color: #f0f5f5;">
 <br>
 <h3 class="d-flex flex-row justify-content-center text-center">CE Capstone - Projects</h3>
 <h5 class="d-flex flex-row justify-content-center text-center">{{year-1}}-{{year}}</h5>
-<!-- <div class="d-flex flex-row justify-content-center">
+<div class="d-flex flex-row justify-content-center">
   <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       {{year}}
     </button>
-    <div class="dropdown-menu" style="min-width: 0px;" aria-labelledby="dropdownMenuButton">
+    <div class="dropdown-menu" style="min-width: 0px; margin-top: 0;" aria-labelledby="dropdownMenuButton">
       {% for i in range(current_year, 2016, -1)%}
       <a class="dropdown-item" href="{{ url_for('projects', year=i)}}">{{i}}</a>
       {% endfor %}
@@ -36,7 +35,7 @@
       <a class="dropdown-item" target="_blank" href="{{ url_for('static', filename='img/projects/archive/projects_2003.pdf')}}">2003</a>
     </div>
   </div>
-</div> -->
+</div>
 <p></p>
 <div class="d-flex flex-row flex-wrap justify-content-center">
   {% for project in projects %}
@@ -56,19 +55,20 @@
 {% for project in projects %}
 <br>
 <div class="d-flex flex-row justify-content-center" id="{{ project.name }}">
-  <div class="p-2 container card bg-light" style="width: 45rem;">
+  <div class="p-2 container card project_div" style="width: 45rem; border:1px solid white;">
     <div class="card-body">
-      <h3 class="card-title text-center">
-        {{ project.name }}
-        {% if project.logo_path %}
-        <img src="{{ url_for('static', filename=project.logo_path) }}" class="img-thumbnail" style="max-width: 100px">
-        {% endif %}
-      </h3>
+      {% if project.logo_path %}
+      <div class="card-title text-center"><img src="{{ url_for('static', filename=project.logo_path) }}" class="img-thumbnail" style="max-width: 200px; border: none;"></div>
+      {% endif %}
+      <h2 class="card-title text-center" style="padding-top: 0px; padding-bottom: 0px;">{{ project.name }}</h2>
       {% if project.video %}
       <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item" src="{{ project.video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <br>
+      {% elif project.image_path %}
+      <img src="{{ url_for('static', filename=project.image_path)}}" class="img-fluid" style="width: 50rem;">
+      <br><br>
       {% endif %}
       <h5 class="text-center">Members</h5>
       <div class="d-flex flex-row flex-wrap justify-content-center">

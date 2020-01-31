@@ -15,7 +15,7 @@
     {% if title %}
     <title>{{ title }}</title>
     {% else %}
-    <title>CE Capstone</title>
+    <title>UCSB CE Capstone</title>
     {% endif %}
     <script type="text/javascript">
       window.onload = function () {
@@ -81,7 +81,7 @@
             <a class="nav-link dropdown-toggle" href="{{url_for('projects')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Projects
             </a>
-            <div class="dropdown-menu" style="min-width: 0px;" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu" style="min-width: 0px; margin-top: 0;" aria-labelledby="navbarDropdown">
               {% for i in range(current_year, 2016, -1)%}
               <a class="dropdown-item" href="{{ url_for('projects', year=i)}}">{{i}}</a>
               {% endfor %}
@@ -102,8 +102,6 @@
               <a class="dropdown-item" target="_blank" href="{{ url_for('static', filename='img/projects/archive/projects_2003.pdf')}}">2003</a>
             </div>
           </li>
-
-
           <li class="nav-item" id="resources">
             <a class="nav-link" href="{{ url_for('resources') }}">Resources</a>
           </li>

@@ -1,0 +1,8 @@
+Execution Instructions:
+1. Insert high definition logos of sponsors into the "sponsors_original" directory.
+2. Execute the "format_images.sh" script by typing ./format_images.sh in the command line.
+3. Add the new sponsor images into the DB.
+
+What format_images.sh does:
+1. Converts all image formats to .png and removes non .png files.
+2. Creates small and large image sizes that are consistent in size.
