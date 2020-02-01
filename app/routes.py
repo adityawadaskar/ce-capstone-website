@@ -5,6 +5,10 @@ from flask import render_template, redirect, send_from_directory, url_for
 from sqlalchemy import and_
 from app.models import Student, Project, Sponsor
 
+
+CURRENT_PROJECT_YEAR = 2020
+MINIMUM_SPONSOR_YEAR = 2018 # Shows sponsors from this year onwards on Sponsors page
+
 SPONSOR_LOGOS_LARGE = "img/sponsors/sponsors_large"
 SPONSOR_LOGOS_SMALL = "img/sponsors/sponsors_small"
 STUDENT_IMAGES = "img/students"
@@ -12,8 +16,8 @@ PROJECT_POSTER = "img/projects/poster"
 PROJECT_SLIDES = "img/projects/slides"
 PROJECT_IMAGES = "img/projects/images"
 PROJECT_LOGOS = "img/projects/logos/logos_resized"
+TEMPORARY_STUDENT_IMAGE = "placeholder.jpg"
 GROUP_PICTURES = "img/group_pictures"
-CURRENT_PROJECT_YEAR = 2020
 
 @app.route('/')
 def index():
@@ -48,7 +52,10 @@ def projects(year=CURRENT_PROJECT_YEAR):
             prj.students.insert(0, team_lead)
         # Join image path
         for student in prj.students:
-            student.image_path = "%s/%s" % (STUDENT_IMAGES, student.image)
+            if student.image:
+                student.image_path = "%s/%s" % (STUDENT_IMAGES, student.image)
+            else:
+                student.image_path = "%s/%s" % (STUDENT_IMAGES, TEMPORARY_STUDENT_IMAGE)
         # Check if website, presentation, and/or poster are available
         prj.resources_available = True if (prj.website != None or prj.presentation != None or prj.poster != None) else False
         prj.resources = list()
@@ -79,7 +86,7 @@ def resources():
 @app.route('/sponsors/')
 def sponsors():
 
-    projects = Project.query.order_by(Project.year.desc())
+    projects = Project.query.filter(Project.year >= MINIMUM_SPONSOR_YEAR).order_by(Project.year.desc())
     year = projects[0].year
     year_dict = {'year': year, 'sponsors': list()}
     all_sponsors = list()
