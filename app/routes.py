@@ -11,7 +11,7 @@ MINIMUM_SPONSOR_YEAR = 2018 # Shows sponsors from this year onwards on Sponsors 
 
 SPONSOR_LOGOS_LARGE = "img/sponsors/sponsors_large"
 SPONSOR_LOGOS_SMALL = "img/sponsors/sponsors_small"
-STUDENT_IMAGES = "img/students"
+STUDENT_IMAGES = "img/students_copy"
 PROJECT_POSTER = "img/projects/poster"
 PROJECT_SLIDES = "img/projects/slides"
 PROJECT_IMAGES = "img/projects/images"
