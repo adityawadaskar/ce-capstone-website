@@ -1,0 +1,617 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  
+  
+  <title>Create Cell</title>
+</head>
+
+<body style="margin-left: 41px; width: 934px; background-image: url(../../../_borders/paper3.gif);">
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal"><b style=""><span style="font-size: 20pt;">Cell Creation</span></b><span style="font-size: 20pt;">:<o:p></o:p></span></p>
+
+
+<p class="MsoNormal"><br>
+
+
+Now to create a cell ... (NOTE will need to have imported the padstacks from the
+ODA central library)</p>
+
+
+<p class="MsoNormal">For this tutorial we will use a
+datasheet from a small chip
+so this tutorial will have a more realistic feel.</p>
+
+
+<p class="MsoNormal">Use the following link to obtain the
+chip datasheet from which we will create a cell.</p>
+
+
+<p class="MsoNormal"><a href="MAX3317ECSA.pdf">MAX3314ECSA
+datasheet</a></p>
+
+<br>
+
+<p class="MsoNormal">To start off you will need to load up
+the Library
+Manager.<span style="">&nbsp; </span>Once the
+library manager is
+loaded you can click on Cell Editor as shown below</p>
+
+
+
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+
+
+
+<p class="MsoNormal"><img style="width: 576px; height: 437px;" alt="" src="Pictures/1-invoke_cell_editor.JPG" v:shapes="_x0000_i1025"></p>
+
+
+
+
+
+<p class="MsoNormal">(1-invoke_cell_editor)</p>
+
+
+
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+
+
+
+<p class="MsoNormal">If you have a central library with no
+Cells then the next
+picture will look like the following picture.</p>
+
+
+
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+
+
+
+<p class="MsoNormal"><img style="width: 431px; height: 568px;" alt="" src="Pictures/2-cell_editor.JPG" v:shapes="_x0000_i1026"></p>
+
+
+
+
+
+<p class="MsoNormal">(2-Cell_Editor)</p>
+
+
+
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+
+
+
+<p class="MsoNormal">The top drop-down menu is the
+partition selection box.<span style="">&nbsp; </span>When
+you have many partitions of cells within
+your library you will only be able to observe cells within 1 partition
+at a
+time.<span style="">&nbsp; </span>If you want
+to edit two cells in
+two different partitions you will need to use that box.</p>
+
+
+
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+
+
+
+<p class="MsoNormal">Sidenote: if you want to modify how
+your cell partitions are
+you may click on the small button to the right side of the drop-down
+menu to
+edit the cell partitions.</p>
+
+
+
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+
+
+
+<p class="MsoNormal">Now, make sure that you are on the
+Package Tab of the cell
+editor and click the little small blue button with a yellow star in the
+center
+that looks like the following</p>
+
+
+
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+
+
+
+<p class="MsoNormal"><img style="width: 23px; height: 23px;" alt="" src="Pictures/3-new_cell_button.JPG" v:shapes="_x0000_i1027"></p>
+
+
+
+
+
+<p class="MsoNormal">(3-new cell button)</p>
+
+
+
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+
+
+
+<p class="MsoNormal">Now a new window should pop up.<span style="">&nbsp; </span>This is the cell creation
+wizard designed to
+make creating a cell easier.</p>
+
+
+
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+
+
+
+<p class="MsoNormal"><img style="width: 333px; height: 555px;" alt="" src="Pictures/4-new_cell_wizard.JPG" v:shapes="_x0000_i1028"></p>
+
+
+
+
+
+<p class="MsoNormal">(4-new cell wizard)</p>
+
+
+
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+
+
+
+<p class="MsoNormal">Taking a look at the datasheet for
+the MAX 3314 we can see
+that we will be creating an 8-pin SOIC, so in the total number of pins
+field
+put 8 and in the Package group use the drop-down menu and find SOIC.</p>
+
+
+
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+
+
+
+<p class="MsoNormal">Make sure to name your cell and to
+specify the number of
+layers to be 2.<span style="">&nbsp; </span>The
+reason we need two layers is because there is a top and there will be a bottom.
+You will not need to use the bottom layer for
+this tutorial, but you must still specify that layer anyway. Now
+click the "Cell Properties" button on the lower left hand corner to open
+the following image:</p>
+
+
+<p class="MsoNormal"><img style="width: 313px; height: 619px;" src="Pictures/4_1-cell_properties_window.JPG" alt=""></p>
+
+
+(4_1-cell_properties_window.JPG)<br>
+
+
+<br>
+
+
+The only thing that you need to check on this screen is that the Units:
+field is changed to "mm". We choose to use "mm" because the
+padstacks we will be using have been created in mm units.
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+<p class="MsoNormal">Click the "close" button on the cell properties
+window, then press the "ok" button on the create new package window
+and now two new windows will appear, the
+window with the focus will be the "Place Pins" window:</p>
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img style="width: 741px; height: 379px;" alt="" src="Pictures/5-place_pins.JPG" v:shapes="_x0000_i1029"></p>
+
+
+
+<p class="MsoNormal">(5-Place pins)</p>
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+
+
+
+<p class="MsoNormal">On the left side of the window are
+your unidentified pins and on the right side of the window are two tabs.
+The "Parameter Place" tab will place your pins according to rows
+and columns you specify. <b>IGNORE THIS TAB!</b>
+The next tab --- "Pattern Place" ---
+is the tab you should be looking at.
+Click on that tab and then click on the drop-down menu to find the SOIC
+option as in the following picture.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img style="width: 741px; height: 379px;" alt="" src="Pictures/6-pattern_place.JPG" v:shapes="_x0000_i1030"></p>
+
+
+<p class="MsoNormal">(6-pattern<span style="">&nbsp;
+</span>Place)</p>
+
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+<p class="MsoNormal">The reason to use the pattern place
+option is that the pins will be placed according to the
+standard pin numbering for that package. <b>Pin numbering is
+extremely important</b> .... it must perfectly match the package
+or your connections won't go to the pins that you think!</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Your window should look like this now:</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img style="width: 741px; height: 379px;" alt="" src="Pictures/7-SOIC_pattern.JPG" v:shapes="_x0000_i1031"></p>
+
+<p class="MsoNormal">(7-SOIC pattern)</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">There are four parameters you will need
+to specify to this tool in order for it to create the cell.
+Remember that if your cell is not created with precision
+your chip will not fit your board. Once your board has been
+fabricated, component fitting problems are not so easy to fix.
+Often they result in ugly wiring patches. So, be careful here.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">The last page of the MAX3314
+datasheet has the dimensions of the actual chip package.
+Use this page to fill in the 4 blank fields.
+<b>!!!NOTE!!!!: this cell creation wizard uses milimeters
+for its measurements.</b>
+You must make sure to input the correct value
+from the datasheet. Most datasheets will either be in
+millimeters or in inches.  Always make sure you check this.
+Lucky for you, the datasheet I provided for this exercise
+has both values. However you may find that datasheets
+for your parts do not specify which units they are using.
+DO NOT ASSUME!!! If you cannot find out what units the datasheet
+uses, call the company and have them tell you. Or, choose an
+equivalent part from another vendor that documents their packages
+a bit more carefully.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">You should find that you will be
+using the fields (from the datasheet I provided)
+"E", "H", "e", and "D".
+Please note that these particular symbols are not standard
+across the industry.  Always check your vendor's datasheet.</p>
+
+<p class="MsoNormal"><o:p></o:p></p>
+
+
+<p class="MsoNormal">The added difficulty on this particular
+datasheet is that there are minimum values and maximum values.
+So which do you use?!?
+Well, I am about to provide you with several formulas that are
+designed to work across the whole ranges, providing all the
+information you need. I will provide five formulas, but only four
+formulas are below. I will introduce the last formula in just a
+second and they are as follows:</p>
+
+<table border="1" cellpadding="4" width="70%">
+ <tr>
+  <td height="19"> Center pad to center pad: </td>
+  <td height="19"> E(min) + 2 L(max)</td>
+ </tr>
+
+ <tr>
+  <td height="19"> Pitch (distance between adjacent pins) : </td>
+  <td height="19"> e </td>
+ </tr>
+
+ <tr>
+  <td height="19"> Length of Cell: </td>
+  <td height="19"> D(max) </td>
+ </tr>
+
+ <tr>
+  <td height="19"> Width of Cell: </td>
+  <td height="19"> E(min) - 0.2mm <br>
+( 0.2mm is subtracted because we do not want the silkscreen outline to overlap any of the pads.)
+  </td>
+ </tr>
+</table>
+<br>
+<p class="MsoNormal">!!!NOTE!!!: Though these formulas should be used
+for all SOIC cells you will be making, the symbols representing each
+of the dimensions may not remain the same. </p>
+<p class="MsoNormal">The following image shows approximately the
+results you should have for the example MAX3314 cell we are building.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img style="width: 751px; height: 390px;" alt="" src="Pictures/8-SOIC_pattern_values.JPG" v:shapes="_x0000_i1032"></p>
+
+<p class="MsoNormal">(8-SOIC pattern values)</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+<p class="MsoNormal">Now to deal with the left side of the
+cell creation wizard</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">The following link to an image has been taken
+from OPTIMUM DxExp
+Library: Land Pattern Specification Sheet.</p>
+
+
+<p class="MsoNormal"><a href="Pictures/9-land_patter_specification.JPG">Use this link to view/download the image</a></p>
+
+<p class="MsoNormal">This sheet will help you understand
+the naming scheme for the padstacks located in the ODA library.
+</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">In this case we will be looking for a
+padstack starting with &ldquo;SR&rdquo; ("S" for surface-mount technology and "R" for
+rectangular shape) and then followed by the dimensions of the
+rectangle. In this case the last formula to remember is that the
+rectangular land pattern shape for a SOIC should be 2x the max length of the pad on
+the package, and 1x the max width of the pad.</span></p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">You should have gotten the dimensions
+of 2.54 mm and 0.49 mm. The closest padstack to that
+size is the 255x50 (Note the assumed position of the invisible decimal points).
+It is always better to have a pad that is slightly larger than the pin
+so always make sure to choose the larger pad if you must choose between two.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Use the drop down menus for each of
+the pins and select the "SR255X050" padstack.
+This is the surface-mount rectangular pad with
+dimensions 2.55mm by 0.50mm. Because all of the pins
+will use the same pad, you may select multiple fields together by
+holding shift, selecting all of the fields and then,
+<b>while still holding shift,</b>
+select the padstack through the drop-down menu.
+Your pin placement window should look like the following
+when you are ready to move on.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img style="width: 751px; height: 390px;" alt="" src="Pictures/10-Place_pins_wizard_final.JPG" v:shapes="_x0000_i1034"></p>
+
+<p class="MsoNormal">(10-place pins wizard final) </p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Now click the "Place" button and let
+the wizard create your Cell.</p>
+
+<p class="MsoNormal"><o:p>Oops! We've created a DRC error! This happened
+because of the <b>orientation</b> of the padstacks. The chosen padstack has
+its width (2.54 mm) and its height (0.50 mm) whereas we want something that
+is taller than it is wide ... i.e. a rotated version with the width and height reversed.
+To fix this, highlight all of the padstacks and change
+their rotation to 90 degrees as shown in the following picture:</o:p></p>
+<br>
+<p class="MsoNormal"><img src="Pictures/10_1-place_pins_rotate.jpg" alt=""><o:p></o:p></p>
+<p class="MsoNormal"><o:p>(10_1-place_pins_rotate.jpg)</o:p></p>
+
+<p class="MsoNormal">Now, click the "Place" buttton and the following
+should be the result of your pin placement</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img style="width: 630px; height: 661px;" alt="" src="Pictures/11-Cell_layout.JPG" v:shapes="_x0000_i1035"></p>
+
+<p class="MsoNormal">(11- Cell layout)</p>
+
+<p class="MsoNormal"><o:p>If you need to open the "Place pins"
+window again, click the button that looks like
+the following:</o:p></p>
+
+<p class="MsoNormal"><img style="width: 29px; height: 26px;" alt="" src="Pictures/11_1-%20Place_Pins_button.jpg"></p>
+
+<p class="MsoNormal"><o:p>(11_1- Place_Pins_button.jpg)</o:p></p>
+<br>
+<p class="MsoNormal">Now we will need to modify the
+REF-DES fields and Part Number fields to be more presentable.
+This can be done by going into "draw" mode.
+To get into "draw" mode click the button
+located on the toolbar at the top of the screen that looks like the
+following image.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img style="width: 28px; height: 25px;" alt="" src="Pictures/12-draw_mode_button.JPG" v:shapes="_x0000_i1036"></p>
+
+<p class="MsoNormal">(12-draw-mode button)</p>
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Once in this mode you should be able to
+select and move the REF-DES fields and Part Number Fields.
+My recommendation is to have the REF-DES fields on the sides
+of the footprint and then to place the
+Part Number Fields either on the sides of the footprint as well, or 
+place them within the footprint. The reasoning
+is that when the board has been fabricated and assembled, the chip will
+sit on top of the footprint you have just designed.
+You will need to know which chips are which.  The reference designator
+will be your key because it appears on the silkscreen.
+</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Now back to business. When you double
+click the REF-DES or Part Number fields you will notice that
+the properties window appears. If it does not, click the
+following button to enable the properties window.</p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal"><img style="width: 23px; height: 23px;" alt="" src="Pictures/13-properties_button.JPG" v:shapes="_x0000_i1039"></p>
+
+<p class="MsoNormal">(13- properties button)</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Use this "Properties" window to see and make changes in
+the various properties of the selected object. Note that there
+are two REF-DES fields, each containing the cell's reference designator
+but each presenting it on a different layer and in a different location.
+One is the "Silkscreen reference designator" and the other is
+the "Assembly reference designator".  You can tell
+which is which by selecting one of them and noting the Type field.
+You can make changes within this window.  For example, you can make
+the text a different size or even have it drawn in a different font.
+It is <b><i>HIGHLY RECOMMENDED</i></b> that you do all of your
+REF-DES and Part Number fields in Gerber-compatible fonts
+in order that your fields will correctly appear on the
+fabricated board!</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">By using the following button, you
+will be able to change
+the visibility of objects in your cell.
+Currently, you should not be able to see the "Part No."
+field, so click the button that looks like this.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img style="width: 22px; height: 24px;" alt="" src="Pictures/14-display_control_button.JPG" v:shapes="_x0000_i1037"></p>
+
+<p class="MsoNormal">(14-display control button)</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">The window that appears will look
+like the following.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img style="width: 241px; height: 458px;" alt="" src="Pictures/15-Display_Control_window.JPG" v:shapes="_x0000_i1038"></p>
+
+<p class="MsoNormal">(15-Display control window)</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">In order to see the part number field
+you will need to scroll down to the section for Assembly Items.
+The check boxes on the left indicate which fields are displayed, and the
+boxes unchecked indicate fields not displayed.
+Play around with this display control window if you wish
+to customize what fields are displayed.</p>
+<p>I recommend that you create all your parts in the same fashion. That way
+all of them will be right, or wrong, in the same way. In addition
+to moving around the Ref_des and part number fields, you will also need
+to add a pin #1 indicator. This is absolutely necessary to ensure
+that the assembler doesn't solder your chip on backwards. For
+surface mount chips, a small circle, or dot, close to pin #1 is the
+usual indicator. For through-hole parts, a square pin one is the
+usual indicator, though using a small circle or dot nearby works as well.<br>
+<br>
+After moving around the Ref_des and Part Number fields and adding
+the pin #1 indicator, your part should
+look like the following:<br>
+<br>
+
+<img style="width: 634px; height: 713px;" alt="" src="Pictures/16-recommended_layout.jpg"><br>
+<br>
+
+(16-recommended_layout.jpg)<br>
+<br>
+
+I oriented the various parts of the new cell (as seen in the previous image)
+for the following reasons:<br>
+
+<ul>
+<li> The white Ref Des field will be printed on the Silkscreen layer and
+will be used by you to identify the chip is after your board
+has been assembled. You will want the white Ref Des field to be clearly
+displayed and never covered by other Cells or pads.</li>
+<br>
+<li> The orange Ref Des field will be printed only in the Gerber files
+specifically for the Assembler (on the so-called "Assembly Plot").
+By placing this field in the center of your cell you are guaranteeing
+that the assembler will not have any issues knowing which part
+to place at that location on the
+board.</li>
+<br>
+<li> The purple "Part No" field will be included only in the Gerber files for
+the Assembly Plot as well as displayed while editing in Expedition PCB (if you
+have their visibility enabled in that program). This field will likely also be
+included in the files sent to the assembler as another
+way to make sure the correct part is placed at that location on the board.</li>
+</ul>
+
+<br>
+<br>
+You should make all of the fields a height of 1.27mm (which is ~50 mils)
+and each will use a pen width of at least 0.15mm
+(6 mils).  If you draw with a pen that is much smaller than this it 
+is likely that the paint will break up. If this happens, your
+silkscreen text items may not be readable.
+</body>
+</html>

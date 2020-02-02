@@ -1,3 +1,148 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="container" style="max-width: 700px;">
+  <br>
+  <h4 class="d-flex flex-row justify-content-center text-center">CE Capstone - Resources</h4>
+  <h6 class="d-flex flex-row justify-content-center text-center">Dr. Yogananda Isukapalli</h6>
+  <br>
+  Lecture Topics
+  <ol>
+    <li>Basics of Embedded Systems</li>
+    <li>System Level Design & Design Decomposition</li>
+    <li>Selection of the Processor</li>
+    <li>Schematics & Printed Circuit Boards</li>
+    <li>Schematics & Design Guidelines</li>
+    <li>Introduction to Eagle PCB</li>
+    <li>Creating New Parts</li>
+    <li>Power Supplies and Distribution</li>
+    <li>Oscillators</li>
+    <li>Placing & Routing</li>
+  </ol>
+  <p>
+    All lecture slides and PCB design source code are available on <a href="https://gauchospace.ucsb.edu/" target="_blank">GauchoSpace</a>.
+  </p>
+  General Links:
+  <ul>
+    <li><a href="./Basics/Basics.html" target="_blank">PCB Basics</a></li>
+    <li><a href=".././Signals.html" target="_blank">Signal Processing Notes</a></li>
+  </ul>
+  <h6 class="d-flex flex-row justify-content-center text-center"><strong>Eagle Tutorials</strong></h6>
+  EAGLE Schematic:
+  <ul>
+    <li><a href="https://www.autodesk.com/products/eagle/blog/schematic-basics-part-1/" target="_blank">EAGLE Schematic (Placement)</a></li>
+    <li><a href="https://www.autodesk.com/products/eagle/blog/schematic-basics-part-2-nets-and-values/" target="_blank">EAGLE Schematic (Wiring)</a></li>
+    <li><a href="https://www.autodesk.com/products/eagle/blog/schematic-basics-part-3-erc/" target="_blank">EAGLE Schematic (DRC)</a></li>
+  </ul>
+  EAGLE Layout:
+  <ul>
+    <li><a href="https://www.autodesk.com/products/eagle/blog/pcb-layout-basics-component-placement/" target="_blank">EAGLE Layout (Placement)</a></li>
+    <li><a href="https://www.autodesk.com/products/eagle/blog/routing-autorouting-pcb-layout-basics-2/"> target="_blank"EAGLE Layout (Routing)</a></li>
+    <li><a href="https://www.autodesk.com/products/eagle/blog/design-rule-check-pcb-layout-basics-3/" target="_blank">EAGLE Layout (DRC)</a></li>
+  </ul>
+  EAGLE Parts Creation:
+  <ul>
+    <li><a href="https://www.autodesk.com/products/eagle/blog/library-basics-part-1-creating-first-package-autodesk-eagle/" target="_blank">EAGLE Package Creation</a></li>
+    <li><a href="https://www.autodesk.com/products/eagle/blog/library-basics-part-2-creating-first-symbol-autodesk-eagle/" target="_blank">EAGLE Symbol Creation</a></li>
+    <li><a href="https://www.autodesk.com/products/eagle/blog/library-basics-part-3-creating-first-device-autodesk-eagle/" target="_blank">EAGLE Device Creation</a></li>
+  </ul>
+  <h6 class="d-flex flex-row justify-content-center text-center"><strong>Mentor Graphics Expedition Tutorials</strong></h6>
+  There are three principal components that we'll need to use:
+  <ol>
+    <li>The Library Manager</li>
+    <li>The front-end schematic tool -- DxDesigner</li>
+    <li>The back-end board layout tool -- ExpeditionPCB</li>
+  </ol>
+  The tutorials should be taken in top-to-bottom order as listed in the Links pane at the left, starting with the "PCB Basics" section and then moving on to the "Glossary", found within the "Library Manager" tutorials, where often-used terms and terminology are explained.
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Links</th>
+        <th scope="col">Library Manager</th>
+        <th scope="col">DxDesigner</th>
+        <th scope="col">Expedition PCB</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="Basics/Basics.html" target="_blank">PCB Basics</a></td>
+        <td><a href="LibMngr/Glossary/Glossary.html" target="_blank">Glossary</a></td>
+        <td><a href="DxD/Intro/Intro.html" target="_blank">Intro</a></td>
+        <td><a href="ExPCB/Intro/Intro.html" target="_blank">Intro</a></td>
+      </tr>
+      <tr>
+        <td><a href="downloads/Downloads.html" target="_blank">Downloads</a></td>
+        <td><a href="LibMngr/Intro/Intro.html" target="_blank">Intro</a></td>
+        <td><a href="DxD/UseCL/UseCL.html" target="_blank">Use CentrlLib</a></td>
+        <td><a href="ExPCB/Place/Place.html" target="_blank">Place</a></td>
+      </tr>
+      <tr>
+        <td><a href="" target="_blank"></a></td>
+        <td><a href="LibMngr/Partitions/Partitions.html" target="_blank">Partitions</a></td>
+        <td><a href="DxD/Copy/Copy.html" target="_blank">Copy</a></td>
+        <td><a href="ExPCB/Planes/Planes.html" target="_blank">Planes</a></td>
+      </tr>
+      <tr>
+        <td><a href="" target="_blank"></a></td>
+        <td><a href="LibMngr/Import/Import.html" target="_blank">Import</a></td>
+        <td><a href="DxD/EasyBus/EasyBus.html" target="_blank">EasyBus</a></td>
+        <td><a href="ExPCB/Route/Route.html" target="_blank">Route</a></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <a href="LibMngr/Part/Part.html" target="_blank">Part</a><br>
+          <a href="LibMngr/Symbol/Symbol.html" target="_blank">Symbol</a><br>
+          <a href="LibMngr/Cell/Create_Cell.html" target="_blank">Cell</a><br>
+          <a href="makepart.html" target="_blank">MakerPart</a>
+        </td>
+        <td><a href="DxD/Import/Import_Project.html" target="_blank">Import</a></td>
+        <td><a href="ExPCB/Setup/Setup.html" target="_blank">Setup</a></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><a href="LibMngr/Find/Find.html" target="_blank">Find</a></td>
+        <td><a href="DxD/Forward/Forward.html" target="_blank">Forward</a></td>
+        <td><a href="ExPCB/CES/CES.html" target="_blank">CES</a></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a href="ExPCB/Analysis/Analysis.html" target="_blank">Analysis</a></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a href="ExPCB/ECO/ECO.html" target="_blank">ECO</a></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a href="ExPCB/Silkscreen/Silkscreen.html" target="_blank">Silkscreen</a></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a href="ExPCB/Drill/Drill.html" target="_blank">Drill</a></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a href="ExPCB/Gerber/Gerber.html" target="_blank">Gerber</a></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a href="ExPCB/BOM/BOM.html" target="_blank">BOM</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 {% endblock %}
