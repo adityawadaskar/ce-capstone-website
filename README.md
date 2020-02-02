@@ -13,14 +13,28 @@ This repository generates the *capstone* subfolder within [Prof. Isukapalli's we
 ```bash
 pip install -r requirements.txt
 ```
+6. Install the [SQLite DB Browser](https://sqlitebrowser.org/) on your local machine. This will be needed to make changes to the *app.db* file.
 
 ## Execution
 
-It is important to follow a [model-view-controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) format within projects. This way, when adding new elements (like student projects, pictures, sponsors, etc.), the developer simply inputs this into a local database file without having to hard-code HTML/CSS elements.
+### Step 1: Make needed changes to *app.db*
+Skip this step if testing/deploying for the first time, as *app.db* should be up-to-date.
 
-Run the following command from the local repository. This will generate a *build* subfolder within the *app* folder and run the website locally.
+Using the SQLite DB Browser, first explore the current table setup. It should be self-explanatory how new information can be added or modified. Once you enter the updated information into the tables, save changes. The files will only build if the correct information is entered within this DB.
 
+### Step 2: Generate build files
+We will generate static files that can be deployed to any HTTP server, and don't need a backend python server setup.
+
+Build the capstone folder by running the below command from within the repo. This will generate an *app/build* subfolder and if successful, begin to run the website locally.
 ```bash
 python ce-capstone.py
 ```
-The *build* folder contains static files that can be deployed to any HTTP server, and don't need a backend python server setup.
+If this step fails, it means that incorrect information was entered into the DB. Make sure to have the correct files present in the *app/static* folder.
+
+### Step 3: Update build files
+Certain components of the website (specifically the *Resources* page) need to be added in the post-processing: Without affecting the *app/build/resources/index.html* file, copy the contents of *app/static/resources/* into *app/build/resources/* 
+
+### Step 4: Include build files within overall personal website.
+1. From your existing deployed code base, delete all files and folders within the *capstone* directory.
+2. Copy the contents of *app/build/* folder into the *capstone/* folder.
+3. The code base is now ready to be deployed.
