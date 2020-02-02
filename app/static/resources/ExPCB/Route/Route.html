@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+
+  
+  <title>Route</title>
+</head>
+
+
+<body style="margin-left: 39px; width: 936px; background-image: url(../../../_borders/paper3.gif);">
+
+
+<p class="MsoNormal"><b style=""><span style="font-size: 20pt;"></span></b></p>
+
+<p class="MsoNormal"><b style=""><span style="font-size: 20pt;">Routing</span></b><span style="font-size: 20pt;">:<o:p></o:p></span></p>
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+<p class="MsoNormal">This tutorial is to introduce the
+different methods of
+routing.<span style="">&nbsp; </span>There are
+two different
+methods: 1. Interactive 2. Auto Route</p>
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+<p class="MsoNormal">For those of you who would like to
+follow along with my
+examples, <a href="../FAE/Route.zip">download this zip file</a>.<span style=""> &nbsp;</span><span style=""></span>The
+following image shows
+how all of the chips are placed:</p>
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+<p class="MsoNormal"><img style="width: 638px; height: 636px;" alt="" src="Pictures/1-start.jpg" v:shapes="_x0000_i1025"></p>
+
+
+
+
+<p class="MsoNormal">(1-start.jpg)<br>
+<o:p></o:p></p>
+<p class="MsoNormal"><o:p>All of the thin white lines that you see show
+connections between chips that will need to be made. &nbsp;If a surface
+mount component has a thin white X on a pad, that means that the pad
+must connect to another plane through the use of a thermal.</o:p></p>
+
+
+<p class="MsoNormal">The Auto Route feature of Expedition
+PCB is very
+powerful.<span style="">&nbsp; </span>The
+example I have above is
+quite simple, however, the Auto Router will be able to figure out how
+to
+connect very complex designs so that you will not have to.<span style="">&nbsp; </span>To open up the Auto Route
+window, click the
+menu <u>R</u>oute -&gt; Auto Route.</p>
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+<p class="MsoNormal">The following image is the Auto Route
+window:</p>
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+
+<p class="MsoNormal"><img style="width: 802px; height: 372px;" alt="" src="Pictures/2-auto_route_window.jpg" v:shapes="_x0000_i1026"></p>
+
+<p class="MsoNormal">(2-auto_route_window.jpg)</p>
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+<p class="MsoNormal">When you first run the auto route all
+passes will be
+enabled.<span style="">&nbsp; </span>Each pass
+is designed to do one
+task to your entire board before performing another specific task.<span style="">&nbsp; </span>This time, leave all of
+the passes enabled so
+that you will be able to see what the auto router can do.<span style="">&nbsp; </span>Click the Route button on
+the bottom right
+and watch.<span style="">&nbsp; </span>Your
+board should look
+something close to the following after running the Auto Router:</p>
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+<p class="MsoNormal"><img style="width: 639px; height: 639px;" alt="" src="Pictures/3-auto_routed.jpg" v:shapes="_x0000_i1027"></p>
+
+
+<p class="MsoNormal">(3-auto_routed.jpg)</p>
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+<p class="MsoNormal">As you can see the auto router will
+not always produce
+perfect routing.<span style="">&nbsp;&nbsp;</span>Several
+wires can be shortened from what was drawn and there are 2 thermals
+with connections purelly underneath the chip. &nbsp;Having no access to
+a wire is very bad because if that connection needs to be severed
+because of a mistake in connecting the chip, you will need to remove
+the chip before you can change the wiring. &nbsp;If you have access to
+every single wire at some point, you will not need to remove any chips
+in order to change the wiring of your board.</p>
+<br>
+Though the connection is correct, the wire between U100 and C1 uses a
+via to connect to the bottom layer. &nbsp;That via is not needed and
+all we will need to do is move the routing around to remove that layer
+change. &nbsp;First delete the routing between C1 and U100 and then we
+can move the connection between U100 and CR1 above C1. &nbsp;To move
+routes, simply left-mouse click on the routing and then drag to the new
+location you wish it to be. &nbsp;If you are following along, try and
+get your board to look like the following:<br>
+<br>
+<br>
+<img src="Pictures/4-moved_routing.jpg" alt=""><br>
+(4-moved_routing.jpg)<br>
+<br>
+The ability to move already routed connections is the most powerful
+aspect of the routing tools. &nbsp;In addition to moving them, you can
+draw in your own routes, like we will in a second, and the routing
+tools will attempt to maintain previous connections while accomodating
+you while you draw in your route.<br>
+<br>
+Click the menu <span style="text-decoration: underline;">R</span>oute
+-&gt; Interactive -&gt; Plow and your cursor will turn into a pair of
+crosshairs. &nbsp;While your cursor looks like crosshairs, you will be
+able to manually route the connections indicated by the thin white
+lines mentioned earlier. &nbsp;Left-mouse click and drag from the
+through hole on C1 to pin 11 of U100 and watch how the routing moves
+around your cursor. &nbsp;When you reach pin 11, the route will
+automatically complete itself and it should look something like the
+following:<br>
+<br>
+<br>
+<img src="Pictures/5-new_route.jpg" alt=""><br>
+(5-new_route.jpg)<br>
+<br>
+Now the issue of routing completely under a chip needs to be addressed.
+&nbsp;Pin 15 of U100 and pin 16 of U101 both are routed 100% under the
+chip. &nbsp;To change that, simply left-mouse click on the thermal and
+drag it to the outside of the chip like in the following image:<br>
+<br>
+<br>
+<img src="Pictures/6-moved_thermal.jpg" alt=""><br>
+(6-moved_thermal.jpg)<br>
+<br>
+Now lets look at the routing for U101 and J2:<br>
+<br>
+<img src="Pictures/7-need_improvement.jpg" alt=""><br>
+(7-need_improvement.jpg)<br>
+<br>
+As you can see, the routing between the connector J2 and the chip U101
+is mediocre at best. &nbsp;Sometimes you can make the routing better by
+simply rotating one of the chips/connectors so that the routes overlap
+less. &nbsp;Lets try rotating the connector J2 180 degrees. &nbsp;In
+order to do that you will need to get back into place mode, then you
+will be able to select the connector and rotate it. &nbsp;Watch as the
+routes maintain connectivity, though not optimally.<br>
+<br>
+<br>
+<img src="Pictures/8-rotation.jpg" alt=""><br>
+(8-rotation.jpg)<br>
+<br>
+The previous image shows even worse connections, however that was just
+because the routing tools tried to maintain the connections previously
+made. &nbsp;Try deleting all of the connections like in the following:<br>
+<br>
+<br>
+<img src="Pictures/9-reroute.jpg" alt=""><br>
+(9-reroute.jpg)<br>
+<p class="MsoNormal">Now open up the auto routing window again and click only the last routing option like in the following:</p>
+<p class="MsoNormal"><img style="width: 794px; height: 363px;" src="Pictures/10-reroute_options.jpg" alt=""></p>
+<p class="MsoNormal">(10-reroute_options.jpg)</p>
+<p class="MsoNormal"><o:p>The reason for only enabling the last route
+pass is so that all of your other connections will be maintained.
+&nbsp;Using the other routing options will change another other manual
+routing you have performed. &nbsp;Click the route button and look at
+the new connections:</o:p></p>
+<p class="MsoNormal"><img src="Pictures/11-rerouted.jpg" alt=""></p>
+<p class="MsoNormal"><o:p>(11-rerouted.jpg)&nbsp;</o:p></p>
+<p class="MsoNormal">As you can see the new routes are actually worse
+than before we started moving the connector's orientation, but do not
+be fooled into thinking that the first orientation of J2 was the better
+orientation. &nbsp;By deleting the 4 routes again and by manually
+routing, you can obtain the following:</p>
+<img src="Pictures/12-rerouted_optimally.jpg" alt=""><br>
+<p class="MsoNormal">(12-rerouted_optimally.jpg)<o:p></o:p></p>
+<p class="MsoNormal"><o:p>Everyone can agree that the above routing is better than the other ways that the connector has been routed to the chip U101.</o:p></p>
+<p class="MsoNormal">As fair warning you should always doublecheck the
+routing of your chips after running the auto router because some times
+you can draw better connections by hand.<o:p></o:p></p>
+<p class="MsoNormal"><b style=""><span style="font-size: 18pt;">Routing Advice</span></b><span style="font-size: 18pt;">:<o:p></o:p></span></p>
+
+
+<p class="MsoNormal"><span style="font-size: 18pt;"><o:p>&nbsp;</o:p></span></p>
+
+
+<p class="MsoNormal">Run the auto router first.</p>
+
+
+<p class="MsoNormal" style="margin-left: 0.5in;">Often
+the auto router will not get
+the most optimum connections but at least it will give you an idea of
+how
+things can be connected</p>
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+<p class="MsoNormal">Always double check the auto router.</p>
+
+
+<p class="MsoNormal" style="margin-left: 0.5in;">Some
+people may find that the auto
+routing will look good enough for them, however I will warn those
+people right
+now that you should always double check the auto router because you
+should try
+and make your wires as short as possible, which is not something the
+auto
+router is always good at.</p>
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+<p class="MsoNormal">Always have access to wire. (I.E. a
+connection is not
+completely underneath a chip)</p>
+
+
+<p class="MsoNormal" style="margin-left: 0.5in;">The
+auto router will make some
+connections this way and that is very bad.<span style="">&nbsp;
+</span>If you accidently wire two things together that were not
+supposed to be
+wired together, you will need to be able to cut the wire.<span style="">&nbsp; </span>If the connection is
+entirely under chips you
+will need to remove the chip before you can cut the wire, which will
+more than
+likely damage the chip in the removal process.</p>
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+<p class="MsoNormal">Try to use 45 degree corners, not 90
+degree corners</p>
+
+
+<p class="MsoNormal" style="margin-left: 0.5in;">If
+you imagine the routes on your
+board as water canals, you would agree that having a 90 degree corner
+will
+limit the flow of water that can go through that particular canal.<span style="">&nbsp; </span>This same principle
+applies to electricity so
+try not to have 90 degree corners in your routing.</p>
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+</body>
+</html>

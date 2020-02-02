@@ -1,0 +1,135 @@
+.about-image {
+	width: 105%;
+}
+
+.about-image1 {
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+
+.about-image-qcom{
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 92%;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.center1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+.course_section {
+	margin-top: 20px;
+}
+
+
+.card {
+	min-height: 310px;
+	padding: 5px;
+	max-width: 820px;
+	margin: .5rem auto 1rem auto;
+}
+
+.card-img {
+  max-height: 100%;
+  opacity: 0.9;
+  overflow-x: hidden;
+}
+.sponsor-img {
+	width: auto;
+	height: 60%;
+	text-align: center;
+	width: 60%;
+	max-width: 300px;
+}
+
+img.resize {
+  max-width:50%;
+  max-height:50%;
+}
+
+.header-img {
+	width: 50%;
+}
+
+.course_section .m6 {
+	text-align: center;
+}
+
+.carousel-pic {
+	max-width: 100%;
+}
+
+.btn {
+	text-transform: none;
+}
+
+.carousel .carousel-item>img {
+	width: 70%;
+	position:absolute;
+  top:0;
+  bottom:0;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: -35%;
+}
+
+h6 {
+  text-align: center;
+}
+
+h5 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+body {
+  background: linear-gradient(#719fc2, #538cb8);
+}
+
+.header-img {
+  text-align: center;
+}
+
+dt {
+  text-align: right;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 993px) {
+	.container {
+		width: 60%;
+	}
+}
+
+.nav-logo {
+	max-width: 100px;
+	margin-left: 25%;
+
+}
+
+nav {
+	background-color: #91c3e9 !important;
+}

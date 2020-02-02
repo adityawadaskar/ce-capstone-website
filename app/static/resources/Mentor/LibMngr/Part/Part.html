@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Part</title>
+
+
+</head>
+
+
+<body style="margin-left: 40px; width: 935px; background-image: url(../../../_borders/paper3.gif);">
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal"><b><span style="font-size: 20pt;">Part Creation Tutorial</span></b><span style="font-size: 20pt;">:</span><span style="font-size: 20pt;"><o:p></o:p></span></p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal">In this tutorial we will learn how to
+link a Symbol (used in DxDesigner) to a Cell (used in Expedition PCB).
+&nbsp;In order to do this tutorial properly you will need to have
+already created a Symbol and a Cell. &nbsp;If you have not
+created them yet, please refer to the <a href="../Symbol/Symbol.html">Symbol</a> and <a href="../Cell/Create_Cell.html">Cell</a> tutorials</p>
+
+<p class="MsoNormal">Now let's learn how to connect a symbol with a cell
+so that you can get on to creating your Schematic!</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img style="width: 960px; height: 728px;" alt="" src="Pictures/1-opening_part_editor.JPG" v:shapes="_x0000_i1025"></p>
+
+<p class="MsoNormal">(1-opening part editor)</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Just as the above image hints at, go
+to the tools menu -&gt; Part Editor&hellip; in order to start creating a Part.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img style="width: 566px; height: 590px;" alt="" src="Pictures/2-Part_Editor.JPG" v:shapes="_x0000_i1026"></p>
+
+<p class="MsoNormal">(2- part editor)</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">If you have already looked at the
+cell tutorial then you will be slightly familiar with this interface.
+The active partition is named in the top drop-down box and all of the
+parts contained in that partition are listed below.
+The Parts listing box has a "properties" button, a "new part" button,
+a "copy" button, an "undo" button, and a "delete" button,
+in that order, from left to right.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">When you click the "new part" button, a
+new row is added to the parts listing box with the word &ldquo;new&rdquo; in one or
+more columns. Replace those words with the name of the part.
+Make sure to fill all three columns with exactly the same name as
+it will make it easier to reference the part later on.
+When you have your new part fully named and highlighted like the
+in the next image, click the button on
+the bottom right labeled <b style="">Pin Mapping&hellip;</b></p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img style="width: 566px; height: 590px;" alt="" src="Pictures/3-new_part.JPG" v:shapes="_x0000_i1027"></p>
+
+<p class="MsoNormal">(3- new part)</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">The next image shows you the pin mapping window</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img style="width: 746px; height: 602px;" alt="" src="Pictures/4-Pin_Mapping_window.JPG" v:shapes="_x0000_i1028"></p>
+
+<p class="MsoNormal">(4- Pin Mapping window)</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">There are three main aspects to the pin mapping window.
+In the upper right hand corner is the "Assign Symbol" section,
+in the upper left hand corner is the "Assign Cell" section, and
+on the bottom of the pin mapping window is where the actual mapping
+occurs. In order to start linking the cell and symbol you will need
+to place each in their respective sections.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">To do this, you must know about the four
+buttons within both the "Assign symbol" and "Assign cell" sections.
+From left to right, the buttons are "new", "open", "undo", and "delete".
+You will not need to use the "new" button as this will add complications
+to your already complicated design.</p>
+
+<p class="MsoNormal">Let's begin ...</p>
+
+<p class="MsoNormal">If you need to create a new symbol or cell for your part, go to
+the library manager and open up the symbol editor or cell editor, as
+well as refer to the <a href="../Symbol/Symbol.html"><u>SYMBOL
+CREATION TUTORIAL</u></a> or <a href="../Cell/Create_Cell.html"><u>CELL
+CREATION TUTORIAL</u></a>.
+If you already have a symbol and cell created,
+then click on the button second from the left from either top section
+that looks like the following.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img style="width: 24px; height: 21px;" alt="" src="Pictures/5-open_button.JPG" v:shapes="_x0000_i1029"></p>
+
+<p class="MsoNormal">(5-open button)</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">This will open the following window which will allow you
+to add both a symbol and a cell to your part.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img style="width: 297px; height: 595px;" alt="" src="Pictures/6-import_window.JPG" v:shapes="_x0000_i1030"></p>
+
+<p class="MsoNormal">(6-import window)</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">If your window does not correspond to
+the previous image, it is because you are on the Cells tab of
+the import window. Merely click on either tab to switch between
+Cells and Symbols. Right now, click on the Symbols tab.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">The top half of the window is pretty
+self explanatory. There is a drop-down box for selecting either
+all partitions or a specific partition which will then populate the box
+below it with the symbols currently in that partition.
+What does need attention is the lower half.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">The lower half of this window is used only when you have created
+a symbol that will be implemented several times on the cell.
+This is best described through an example.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Let us suppose, for example, that you want to use one
+AND gate in your design. You might find that the only parts that are available
+have four AND gates per chip (i.e. so-called "quad AND gates"),
+and thus you will have bought a chip with four times as many gates
+as you need for your design.  In addition you might have already created
+the symbol for your single AND gate, but now you have a chip with four of them.
+</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">This problem is solved by inserting
+the number &ldquo;4&rdquo; in the field &ldquo;Number of slots in component&rdquo;</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Enough with this side-comment.  We are actually not going to
+fully explain about how to deal with more than one "slot" per component since
+this is a fairly complex task and we do not need it for class projects.
+You will, for the most part, be designing a symbol
+specifically for each cell.  Thus you may just insert the value
+&ldquo;1&rdquo; in the &ldquo;Number of
+slots in component&rdquo; box like the following image shows.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img style="width: 253px; height: 109px;" alt="" src="Pictures/7-multiple_instances_check_box.JPG" v:shapes="_x0000_i1031"></p>
+
+<p class="MsoNormal">(7-multiple instances check box)</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Now you are done with the Symbol tab
+so let's move on to the cell tab. You will find that the cell
+tab is very simple. Here is what the window
+looks like.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img style="width: 297px; height: 595px;" alt="" src="Pictures/8-cells_import.JPG" v:shapes="_x0000_i1032"></p>
+
+<p class="MsoNormal">(8-cells import)</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Merely use the three drop-down boxes
+to narrow the search for cells to display in the lower box
+and then click on the cell you wish to
+use in this part.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">When you are done click the "OK" button
+and have the symbol and cell added to the part.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Now to connect the names of the pins
+from the symbol to the actual pins on the cell,
+including those pins that are not connected and also those that are
+attached to power or ground.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">At the bottom of the Pin Mapping
+screen we find the pin mapping section. There are
+three tabs to this section and you will need to deal only with two of them.
+The logical tab can be ignored.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">The second tab is the physical tab
+which will connect the
+labeled pins in the symbol to the pins available in the cell.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">The third and final tab is the Supply
+and NC tab.<span style="">&nbsp; </span>This
+tab is used for the pins that are not
+connected to anything and for pins that are to be connected to either
+the power
+or ground that were not specified in the symbol. </p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">To specify a supply name, left click
+on the Supply name
+field and type a name followed by pressing the
+&ldquo;enter&rdquo; key.<span style="">&nbsp; </span>You
+may then enter as many pins that are
+connected to that supply.<span style="">&nbsp; </span></p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">To specify no connect pins simply
+follow the last few steps
+listed for adding supply pins on the bottom section with the label
+&ldquo;no
+connect&rdquo;.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+</body>
+</html>

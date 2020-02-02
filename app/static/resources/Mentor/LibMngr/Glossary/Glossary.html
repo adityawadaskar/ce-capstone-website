@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Glossary</title>
+
+</head>
+
+
+<body style="background-image: url(../../../_borders/paper3.gif); margin-left: 41px;">
+
+<p class="MsoNormal"><span style="font-size: 20pt;"></span></p>
+
+<h1>Glossary of Terms</h1>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><b style="">Central Library</b>:<span style="">&nbsp; </span></p>
+
+<p class="MsoNormal" style="text-indent: 0.5in;">The
+central library is a database of multiple linked libraries. Included
+among these libraries are the Cells library, Symbols library,
+and PadStack library. The central library maintains the link between cells and symbols
+which comprises the Parts library.
+By having all the libraries maintained as one
+entity (the central library) the user is allowed to modify cells
+and/or symbols and not worry about having to update every part
+that refers to a modified cell or symbol.  The central
+library takes care of updating all Parts to reflect the changes made to the Cell or
+Symbol.</p>
+
+<p class="MsoNormal" style="text-indent: 0.5in;"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">NOTE:<span style="">&nbsp;
+</span>Although multiple central libraries can be created, it is only possible to link
+a single central library to a project. If you find yourself needing to add
+components to a central library that is write protected, simply create a new
+central library and import all components from the write-protected one.
+This will give you access to all components from the first
+central library as well as the ability to create new components or modify
+existing ones. In fact, early in your project development you will want to
+make your own central library by starting with the given
+<a href="Files/Secure/ECE189Library.zip"><U>ECE189 Central Library</U></a>
+(essentially a clean slate but with built-in properly-established design
+rules and PCB template) and then importing padstacks, cells, symbols,
+and parts from other available libraries to the one that is local and
+writeable for your project.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><b style="">Components</b>:</p>
+
+<p class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>This term is not defined or used uniquely within the Mentor Graphics tools
+but rather is a term used frequently in this document to refer to an instance
+of an object from a library.  For instance, a component could be a part from the Parts
+library or could be a cell from the Cells library.
+The term is used rather than directly saying "part" or "cell" so that all
+libraries can be referenced to the action.  If
+a particular action is limited to only a particular library or a small
+set of libraries then the list of libraries will be given in parentheses.
+<span style="">&nbsp; </span></p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><b style="">Partition</b>:<span style="">&nbsp; </span></p>
+
+<p class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>A partition is a user-defined grouping of Parts, Cells, or
+Symbols (within
+a library). These are essential to organizing your libraries. Think of
+partitions as
+folders you would create on a computer. You can create as many folders
+as you would
+like to organize your files but creating too many folders can be
+confusing. Partitions are more limited than folders; e.g. partitions
+cannot be created within
+partitions, though you can create as many partitions in a library
+as you like. Partitions also offer a limited amount of
+security to your library files in that only one user is allowed to
+modify parts in a partition. Once a user begins
+editing a part/cell/symbol in a partition, all others who try and
+access that partition will only be granted read access.
+Once the first user finishes editing the part/cell/symbol, then others
+will be able to modify a part/cell/symbol in that partition.
+It is recommended that if you plan on having
+two users working on parts using the same library that two different
+partitions are created so that each user will be able to modify a list
+of
+parts/cells/symbols without having to wait for the other to finish
+before starting work.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><b style="">Local Library</b>:
+</p>
+
+<p class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>This topic is not covered very well in the existing
+documentation but is crucial to understand.<span style="">&nbsp;
+</span>The local library is used only when the Library Manager is
+accessed THROUGH Expedition PCB or DxDesigner. When a
+component, be it a Part/Cell/Symbol,
+is modified through this path, the component is not saved directly to the
+central library, but instead is saved to the local library.
+Having modifications of parts/cells/symbols in your local library that
+are not imported to the central library eventually
+will lead to verification errors. This happens
+because the design will be compared to the central library upon
+verification, and the part/cell/symbol will be different from the
+version found on the central library, thus Expedition/DxDesigner will
+detect an error and stop. </p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">HOW TO AVOID VERIFICATION PROBLEMS:
+It is highly recommended that when a part/cell/symbol needs modification, the library manager is
+invoked from OUTSIDE the DxDesigner/Expedition PCB programs. This will always
+result in modification of the central library rather than the local library.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">WHY HAVE THE LOCAL LIBRARY?:
+Expedition PCB maintains a local library as a safety feature
+to prevent a user from editing the copy in the central library and then
+realizing that he/she messed up such that the original copy cannot be
+recovered. By using the local library when editing parts through
+DxDesigner/Expedition PCB, users can modify components without worry
+that they might overwrite the original copy. This provides a possibility of
+restoring everything back to the original state.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">HOW TO MERGE THE LOCAL LIBRARY WITH
+THE CENTRAL LIBRARY:</p>
+
+<p class="MsoNormal">By invoking "Library Services"
+through the library manager, parts can be imported from the local
+library present in your project as well as from other central libraries.
+Components present in the
+local library that are modifications of components in
+the central library will require an overwrite of the older versions in
+the central library. If a user would wish to keep the older version
+then they would need to rename either of the parts to
+prevent the old version from being overwritten.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><b style="">Parts</b>:</p>
+
+<p class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>A "part" is a mapping between
+a "symbol" (which represents the connectivity within a schematic) and a
+"cell" (which is the device footprint on a printed circuit board). The
+mapping relates physical pins of the footprint with logical net names
+on the symbol so that the tools know how to maintain and check connectivity
+and usage of the part within the design. The "Parts Library" is one
+of the libraries present in any central library. It contains an array of
+linked Cells and Symbols. The Cells and Symbols are
+linked in this fashion so that a schematic may be designed using
+Symbols (where the exact footprint dimensions of the chips are not a factor)
+while retaining the capability to have all the connections in the schematic
+be placed on the board using Cells (where the exact dimensions of the chips
+are a factor). Though schematics can use symbols directly (rather than parts) it
+is highly advised to design your schematics with parts from the beginning so that
+they will not have to later be replaced in order to use the board routing software.
+</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><b style="">Cells</b>:</p>
+
+<p class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>A "cell" represents the physical
+appearance of a device on a printed circuit board. The "Cell Library" is one
+of the libraries present in the central library. Each cell in this library
+specifies the details of the footprint of a device.
+What this means is that the cell has the exact dimensions of the chip package
+it is named after, including the geometrical patterns that must be
+present on each of the layers of the PCB. The cell provides the appearance
+that allows a chip package to be connected to the board (surface mount,
+through-hole, etc).  In practice, "cells" are linked with a symbol in order to form a
+"part", and it is the "part" that is referenced in schematics and board-level
+manipulations.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><b style="">Symbols</b>:</p>
+
+<p class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>A "symbol" is a formal
+representation of a component that specifies its input, output,
+power/ground, and other port attachments. The "Symbol Library" is one of the
+libraries present in the central library. Each symbol in this library is a
+representation of a chip that can be used in a schematic.
+Symbols do not contain the physical ("cell"-level) details necessary
+for placing the chip on a printed circuit board; in fact,
+a symbol need not even look like the chip it represents.
+The primary purpose of "symbols" are for specifying
+the connections within a project.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><b style="">Padstacks</b>:</p>
+
+<p class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>A "padstack" is a collection of geometric shapes appearing
+on each of mask layers surrounding a through-hole in a printed circuit
+board. There are also padstack-related geometries associated with surface-mounted
+devices.  The "Padstack Library" is one of the libraries present in the central
+library.  Each padstack in this library is a representation of a pad or
+through-hole to be used in a design. Padstacks are referenced in making Cells;
+they are very detailed. They contain exact dimensions that must
+precisely correspond to the description of the manufacturer's package.
+Our central library has most of the padstacks that we will need already
+defined, so once you import all of the padstacks to your project's
+central library, there should be no need to edit them or to create more.
+If you have the need to create more, access the padstack tutorial for
+further information.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><b>Models</b>:</p>
+
+<p class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>This is one of the libraries present in the central library. Currently the library
+is unpopulated. However, there is room to place spice or verilog versions
+of chips for device emulation. Not needed for this course.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><b>Gerber format</b>:</p>
+
+<p class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>A Gerber file is a standard file format used by printed circuit board fabricators. It
+contains all data necessary for computer-controlled machines to create
+the exact mask patterns needed for PCB fab. Gerber files typically specify features such as land
+patterns, signal traces, and drilled holes, as well as milling and cutting information.
+The Gerber format in use today is also known as EIA RS-274-X.
+</p>
+

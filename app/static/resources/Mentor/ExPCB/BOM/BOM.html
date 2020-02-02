@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Drill</title>
+
+
+</head>
+<body style="margin-left: 39px; width: 936px; background-image: url(../../../_borders/paper3.gif);">
+
+<p class="MsoNormal"><b style=""><span style="font-size: 20pt;"></span></b></p>
+
+<p class="MsoNormal"><b style=""><span style="font-size: 20pt;">Bill of Materials (BOM) Generation</span></b></p>
+
+<p class="MsoNormal"><span style="font-size: 20pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal">There are a couple ways to generate a bill of materials (a "BOM")
+from Expedition PCB.  Since a BOM is often represented in the form of a spreadsheet,
+the easiest method for directly generating one is outlined below.  This involves
+using a pre-built Excel spreadsheet that contains macros so be sure that your security
+settings within Excel allow macros to be executed.</p>
+
+<p>The steps are as follows:</p>
+
+<ul>
+<li>Launch Expedition PCB</li>
+<li>Open your PCB layout</li>
+<li>In a separate Windows Explorer window, navigate to
+<b>C:\MentorGraphics\2007EE\SDD_HOME\standard\examples\pcb\Automation\Excel</b></li>
+<li>Double click the <b>ExcelCompList.xls</b> file</li>
+<li>When Excel opens, clist "Start" within the spreadsheet.</li>
+</ul>
+
+<p>The above steps should generate a spreadsheet containing the parts
+that comprise your current project.  There is no way to modify the
+composition or layout of the spreadsheet, though you can of course
+use Excel to modify it once it is generated.</p>
+
+<p>If you wish to have ultimate control over the composition and layout
+of your BOM, you must use the <b>Report Writer</b>.
+This program is available under the menu Output->Report Writer...".
+The Report Writer exposes an underlying relational database.  Once you
+have opened up the Report Writer, you want to choose "Physical Board Data"
+to populate your database.</p>
+
+<p> Most of the fields of interest for a bill of materials are found in
+the <b>Tcomp</b>, <b>TPartNumber</b>, and
+<b>TPartNumberProperty</b> tables.  You would need to use the 
+Query->Interactive Query facility to define the tables and fields
+within each that are desired as part of your BOM report.  Once
+these fields have been selected you can save the query and ultimately
+export the report it generated as a comma-separated-values (csv)
+file which can be opened and understood by Excel.</p>
+
+</body>
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Library Manager Find Function:</title>
+
+
+<!-- Source File -->
+  <link rel="stylesheet" type="text/css" href="CSS/reset-fonts-grids.css">
+
+</head>
+
+
+<body style="background-image: url(../../../_borders/paper3.gif);" hspace="50">
+
+<div style="text-align: left; margin-left: 40px;" id="bd">
+<div id="yui-main">
+<div class="yui-b"><br>
+
+<br>
+
+<p class="MsoNormal">
+
+</p>
+<p class="MsoNormal"><b style=""><span style="font-size: 20pt;">Library Manager Find Function</span></b><span style="font-size: 20pt;">:<o:p></o:p></span></p>
+<br>
+If you are looking for a particular
+part/cell/symbol but are
+having a hard time finding them in the thousands of entries do not
+worry
+because Mentor made a comprehensive find function to help with all your
+needs.
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">NOTE: You must have already opened up
+a .lmc file to use the
+find function.<span style="">&nbsp; </span></p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">The find function is not a function
+you will find in the
+menus within the library manager.<span style="">&nbsp;
+</span>The
+find function can only be found by right clicking on the library
+navigation
+tree as shown below.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img src="Pictures/right%20click%20menu.jpg"></p>
+
+<p class="MsoNormal"><br>
+
+</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">You can right click on any of the
+entries in the tree.<span style="">&nbsp; </span>For
+consistency I right clicked on the
+&ldquo;Parts&rdquo; library icon.<span style="">&nbsp;
+</span>Right clicking on
+other entries will give a slightly different menu, all of which will
+have the
+find function</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">The following is a picture of what
+the find pop-up will look
+like.</p>
+
+<p class="MsoNormal"><img src="Pictures/find%20pop-up.jpg" v:shapes="_x0000_i1026" height="230" width="367"></p>
+
+<p class="MsoNormal"><br>
+
+</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">The standard find just uses the
+search for drop down box and
+a part name.<span style="">&nbsp; </span>You
+can search by the
+following:</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img src="Pictures/Search%20For%20menu.jpg" v:shapes="_x0000_i1027" height="225" width="367"></p>
+
+<p class="MsoNormal"><br>
+
+</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Now before we do a simple example I
+must pull up some
+information straight from the help files in library manager.<span style="">&nbsp; </span>These search wildcard
+commands must be used
+in order to broaden or narrow your search name.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="ptabletitle">Table 1-2. Search Methods Using
+Wildcard Characters </p>
+
+<table class="MsoNormalTable" style="text-align: left; margin-left: 0px; margin-right: auto;" border="1" cellpadding="0" cellspacing="0">
+
+  <tbody>
+
+    <tr style="">
+
+      <td style="padding: 3.75pt; background: rgb(204, 204, 204) none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial;">
+      <p class="ptableheading" style="text-align: center;" align="center"><a name="wp8508"></a><b>Wildcard
+Character String <o:p></o:p></b></p>
+
+      </td>
+
+      <td style="padding: 3.75pt; background: rgb(204, 204, 204) none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial;">
+      <p class="ptableheading" style="text-align: center;" align="center"><a name="wp8510"></a><b>Description
+      <o:p></o:p></b></p>
+
+      </td>
+
+    </tr>
+
+    <tr style="">
+
+      <td style="padding: 3.75pt;" valign="top">
+      <p class="ptablecell"><a name="wp8512"></a>?
+      </p>
+
+      </td>
+
+      <td style="padding: 3.75pt;" valign="top">
+      <p class="ptablecell"><a name="wp8514"></a><span class="cdefault">Match one character.</span> </p>
+
+      </td>
+
+    </tr>
+
+    <tr style="">
+
+      <td style="padding: 3.75pt;" valign="top">
+      <p class="ptablecell"><a name="wp8516"></a>character?
+      </p>
+
+      </td>
+
+      <td style="padding: 3.75pt;" valign="top">
+      <p class="ptablecell"><a name="wp8518"></a><span class="cdefault">Select a single entity that begins with a
+specified character(s).</span> </p>
+
+      </td>
+
+    </tr>
+
+    <tr style="">
+
+      <td style="padding: 3.75pt;" valign="top">
+      <p class="ptablecell"><a name="wp8520"></a>?character
+      </p>
+
+      </td>
+
+      <td style="padding: 3.75pt;" valign="top">
+      <p class="ptablecell"><a name="wp8522"></a><span class="cdefault">Select a single entity that ends with a
+specified character(s).</span> </p>
+
+      </td>
+
+    </tr>
+
+    <tr style="">
+
+      <td style="padding: 3.75pt;" valign="top">
+      <p class="ptablecell"><a name="wp8524"></a>?character?
+      </p>
+
+      </td>
+
+      <td style="padding: 3.75pt;" valign="top">
+      <p class="ptablecell"><a name="wp8526"></a><span class="cdefault">Select a single entity that conforms to a
+specified character or string.</span> </p>
+
+      </td>
+
+    </tr>
+
+    <tr style="">
+
+      <td style="padding: 3.75pt;" valign="top">
+      <p class="ptablecell"><a name="wp8528"></a><span class="cdefault"><b>*</b></span> </p>
+
+      </td>
+
+      <td style="padding: 3.75pt;" valign="top">
+      <p class="ptablecell"><a name="wp8530"></a>Selects
+all available entities (zero or match one or more characters). </p>
+
+      </td>
+
+    </tr>
+
+    <tr style="">
+
+      <td style="padding: 3.75pt;" valign="top">
+      <p class="ptablecell"><a name="wp8532"></a>character*
+      </p>
+
+      </td>
+
+      <td style="padding: 3.75pt;" valign="top">
+      <p class="ptablecell"><a name="wp8626"></a>Selects
+all entities that begin with a specified character (for example, 10*
+specifies all objects that begin with 10). </p>
+
+      </td>
+
+    </tr>
+
+    <tr style="">
+
+      <td style="padding: 3.75pt;" valign="top">
+      <p class="ptablecell"><a name="wp8536"></a>*character
+      </p>
+
+      </td>
+
+      <td style="padding: 3.75pt;" valign="top">
+      <p class="ptablecell"><a name="wp8639"></a>Selects
+all entities that end with a specified character (for example, *H
+specifies all objects that end with H). </p>
+
+      </td>
+
+    </tr>
+
+    <tr style="">
+
+      <td style="padding: 3.75pt;" valign="top">
+      <p class="ptablecell"><a name="wp8540"></a>*character*
+      </p>
+
+      </td>
+
+      <td style="padding: 3.75pt;" valign="top">
+      <p class="ptablecell"><a name="wp8652"></a>Selects
+all entities that conform to a specified character string (for example,
+*r* returns all objects that have "r" in the string). </p>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Now that you know about the search
+wildcards I can show you
+an example.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">NOTE: without wildcards you must
+specify<span style="">&nbsp; </span>the exact
+name as it is labeled in the
+library.<span style="">&nbsp; </span>This may
+be a difficult task if
+you do not know what the exact naming scheme is and if you guess wrong
+the find
+function will freeze the library manager.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">TIP: its good practice to use the
+following search technique
+to help prevent the library manager from freezing due to a failed find.
+</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">*&lt;name&gt;*</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">If you have an asterisk before and
+after the name of the
+chip you will always be able to get some results.<span style="">&nbsp;
+</span>The only time you would not get results would
+be if you misspelled the name of the chip/symbol/cell/padstack or if it
+actually did not exist in your library. (most problems will be the
+former and
+not the latter)</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Lets pretend we are looking for a
+RS232 chip from the
+company Max.<span style="">&nbsp; </span>Since
+I know that the chip
+is labeled as MAX232 I will use that as my search name with a couple
+wildcards.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">First I open up the find popup and
+then I will select part
+as what I am searching for</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img src="Pictures/Search%20For%20menu.jpg" v:shapes="_x0000_i1028" height="225" width="367"></p>
+
+<p class="MsoNormal"><br>
+
+</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Now because the library will have the
+name of the company
+then the name of the chip just typing in the name of the chip in the
+part
+number field (notice how it changed from &ldquo;Name&rdquo;?<span style="">&nbsp; </span>This means the same thing
+however so do not
+pay any mind to the change in terminology.) will not produce any
+results.<span style="">&nbsp; </span>This means
+we will want to use the asterisk
+wildcards.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img src="Pictures/Part%20search.jpg" v:shapes="_x0000_i1029" height="225" width="367"></p>
+
+<p class="MsoNormal"><br>
+
+</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Leave the object association and its
+corresponding name
+field alone this example and press the OK button. </p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Because the Library Navigator Tree
+does not have the focus,
+click in the white space around all the listed parts to give the
+navigator
+focus.<span style="">&nbsp; </span>Now you will
+see the first part
+that matched the search for the MAX232 chip.<span style="">&nbsp;
+</span>There are several variations of this chip so if you happen
+to be using
+this kind of chip make sure to use the correct version.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Now to introduce the Object
+Association field.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">This field is used to help narrow
+your search by specifying
+the part/cell/padstack/symbol &lsquo;s association with another
+part/cell/symbol/padstack.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">For example lets say we were looking
+for the MAX211 chip,
+but there are two types of packaging for this chip.<span style="">&nbsp;
+</span>Pretend you are looking for the SOIC version
+rather than the SOP</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Merely change the part number field
+from *MAX232* to the
+name *MAX211* and now click on the object association field</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img src="Pictures/Object%20Association%20Menu.jpg" v:shapes="_x0000_i1030" height="225" width="367"></p>
+
+<p class="MsoNormal"><br>
+
+</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Now you can see that we can do a
+reference by cell, symbol
+or by any kind of object.<span style="">&nbsp; </span>Because
+we
+know we are looking for the difference between the cells, choose
+References a
+Cell </p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img src="Pictures/Object%20Association%20%28ref%20by%20cell%29.jpg" v:shapes="_x0000_i1033" height="225" width="367"><span style="">&nbsp;</span></p>
+
+<p class="MsoNormal"><br>
+
+</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Now type in *SOIC* in the now enabled
+name field.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img src="Pictures/Find%20Function%20Advanced.jpg" v:shapes="_x0000_i1031" height="225" width="367"></p>
+
+<p class="MsoNormal"><br>
+
+</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">And when you press the OK button you
+will find that the
+library navigator will have the second MAX211 highlighted.<span style="">&nbsp; </span>This is the chip that uses
+the SOIC cell
+while the first MAX211 uses the SOP cell as can be seen by the
+following
+picture.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img src="Pictures/Find%20Function%20Results.jpg"></p>
+
+<p class="MsoNormal"><br>
+
+</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;;">The
+object association can narrow your search
+significantly if there are many instances of the same chip.</span></div>
+
+</div>
+
+</div>
+
+</body>
+</html>

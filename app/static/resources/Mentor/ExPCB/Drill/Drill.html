@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Drill</title>
+
+
+</head>
+<body style="margin-left: 39px; width: 936px; background-image: url(../../../_borders/paper3.gif);">
+
+<p class="MsoNormal"><b style=""><span style="font-size: 20pt;"></span></b></p>
+
+<p class="MsoNormal"><b style=""><span style="font-size: 20pt;">Drill Generation</span></b><span style="font-size: 20pt;">:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size: 20pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal">The drill generator is used to create
+a some plotted data that gets incorporated in a Gerber file for the
+board fabricator, and thus, this process must be completed <b>before</b>
+you can create a complete set of Gerber files.
+The drill generator information on the Gerber file 
+includes how many holes and vias are present on the board as well as
+a legend mapping a small set of symbols representing each 
+hole diameter for the board fabricator to use for visual verification.</p>
+
+<p>In addition to this so-called "drill drawing" information, the drill
+generator writes a set of NC tool files that specify the drill locations and
+drill diameters for all of the holes on your board.
+
+It is critically important that every time you make a change to
+your board (for which a new set of Gerbers and silkscreen and NC drill files
+are needed) you will need to run this generator again.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">To open up the drill generator, click
+the menu <u>O</u>utput
+-&gt; <u>N</u>C Drill&hellip;</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img style="width: 273px; height: 432px;" alt="" src="Pictures/1-output_menu.jpg" v:shapes="_x0000_i1025"></p>
+
+<p class="MsoNormal">(1-output_menu.jpg)</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">This will open up the following window</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><img style="width: 484px; height: 524px;" alt="" src="Pictures/2-drill_window.jpg" v:shapes="_x0000_i1026"></p>
+
+<p class="MsoNormal">(2-drill_window.jpg)</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">The best part about this generator is
+that the default settings are set up properly for
+our ECE189 printed circuit board processing.  To generate
+the information for the board fabricator, just press the
+"OK" button and Expedition PCB will generate the
+correct drill information.</p>
+
+</body>
+</html>
