@@ -5,8 +5,7 @@ from flask import render_template, redirect, send_from_directory, url_for
 from sqlalchemy import and_
 from app.models import Student, Project, Sponsor
 
-
-CURRENT_PROJECT_YEAR = 2020
+CURRENT_PROJECT_YEAR = 2020 # Update each year
 MINIMUM_SPONSOR_YEAR = 2018 # Shows sponsors from this year onwards on Sponsors page
 
 SPONSOR_LOGOS_LARGE = "img/sponsors/sponsors_large"

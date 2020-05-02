@@ -7,5 +7,5 @@ class Config(object):
         'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     FREEZER_RELATIVE_URLS = False
-    # FREEZER_BASE_URL = "http://localhost:8000/capstone/"
-    FREEZER_BASE_URL = "https://www.ece.ucsb.edu/~yoga/capstone/"
+    # FREEZER_BASE_URL = "http://localhost:8000/capstone/" # For local testing
+    FREEZER_BASE_URL = "https://www.ece.ucsb.edu/~yoga/capstone/" # For deployment
