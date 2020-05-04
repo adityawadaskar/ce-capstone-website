@@ -29,7 +29,7 @@ Build the capstone folder by running the below command from within the repo. Thi
 ```bash
 python ce-capstone.py
 ```
-If this step fails, it means that incorrect information was entered into the DB. Make sure to have the correct files present in the *app/static* folder.
+If this step fails, it means that incorrect information was entered into the DB (most likely) or the app code has bugs. Make sure the filenames provided in app.db match the files present in the *app/static* folder.
 
 ### Step 3: Update build files
 Certain components of the website (specifically the *Resources* page) need to be added in the post-processing: Without affecting the *app/build/resources/index.html* file, copy the contents of *app/static/resources/* into *app/build/resources/* 
