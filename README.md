@@ -22,6 +22,8 @@ Skip this step if testing/deploying for the first time, as *app.db* should be up
 
 Using the SQLite DB Browser, first explore the current table setup. It should be self-explanatory how new information can be added or modified. Once you enter the updated information into the tables, save changes. The files will only build if the correct information is entered within this DB.
 
+To add new tables or fields and update the DB structure, use this [tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database).
+
 ### Step 2: Generate build files
 We will generate static files that can be deployed to any HTTP server, and don't need a backend python server setup.
 
