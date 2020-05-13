@@ -36,7 +36,8 @@ def schedule():
 @app.route('/projects/')
 @app.route('/projects/<int:year>/')
 def projects(year=CURRENT_PROJECT_YEAR):
-    projects = Project.query.filter(Project.year==year, Project.students != None).all()#.filter(logo!=None).all()
+    projects = Project.query.filter(Project.year==year, Project.students != None).all()
+    projects = sorted(projects, key = lambda i: i.ordering)
     for prj in projects:
         # Set video/image location
         if prj.image:

@@ -42,6 +42,7 @@ class Project(db.Model):
     team_leads = db.relationship('Student', secondary=team_leads_projects, back_populates='projects')
     students = db.relationship('Student', secondary=students_projects, back_populates='projects')
     sponsors = db.relationship('Sponsor', secondary=projects_sponsors, back_populates='projects')
+    ordering = db.Column(db.Integer)
 
     def __repr__(self):
         return '<Project {}>'.format(self.name)
